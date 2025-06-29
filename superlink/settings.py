@@ -104,7 +104,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.parse(
-        'postgresql://horugavye:3FA9mB661lAbeoCPMGP0051wvx37A11j@dpg-d1gga8bipnbc73amcrlg-a/superlinkdata_rggv',
+        'postgresql://superlink_user:OtlelJjz1Desy5AmhjOhN5A0opD5Q1MM@dpg-d1gji5emcj7s73cs2bug-a/superlink',
         conn_max_age=600
     )
 }
