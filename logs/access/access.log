@@ -1,0 +1,1588 @@
+ERROR 2025-06-25 15:25:12,897 log 27877 140021520635584 Internal Server Error: /api/communities/tech-enthusiasts/posts/1/rate/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 946, in get_or_create
+    return self.get(**kwargs), False
+           ~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.PostRating.DoesNotExist: PostRating matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/backend/community_api/views.py", line 1028, in rate
+    post_rating, created = PostRating.objects.get_or_create(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        personal_post=post,
+        ^^^^^^^^^^^^^^^^^^^
+        user=request.user,
+        ^^^^^^^^^^^^^^^^^^
+        defaults={'rating': rating}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 953, in get_or_create
+    return self.create(**params), True
+           ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 677, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/backend/community/models.py", line 423, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+    ~~~~~~~~~~~~~~^
+        sender=origin,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        using=using,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/assistant/models.py", line 821, in update_community_score
+    score.update_scores()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/backend/assistant/models.py", line 914, in update_scores
+    for rating_type, _ in PostRating.RATING_TYPES:
+                          ^^^^^^^^^^
+NameError: name 'PostRating' is not defined
+ERROR 2025-06-25 15:27:12,596 log 29074 140224196748992 Internal Server Error: /api/communities/tech-enthusiasts/posts/1/rate/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 946, in get_or_create
+    return self.get(**kwargs), False
+           ~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.PostRating.DoesNotExist: PostRating matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/backend/community_api/views.py", line 1028, in rate
+    post_rating, created = PostRating.objects.get_or_create(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        personal_post=post,
+        ^^^^^^^^^^^^^^^^^^^
+        user=request.user,
+        ^^^^^^^^^^^^^^^^^^
+        defaults={'rating': rating}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 953, in get_or_create
+    return self.create(**params), True
+           ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 677, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/backend/community/models.py", line 423, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+    ~~~~~~~~~~~~~~^
+        sender=origin,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        using=using,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/assistant/models.py", line 822, in update_community_score
+    score.update_scores()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/backend/assistant/models.py", line 915, in update_scores
+    for rating_type, _ in PostRating.RATING_TYPES:
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'PostRating' has no attribute 'RATING_TYPES'
+ERROR 2025-06-25 15:29:12,790 log 30071 140710593967808 Internal Server Error: /api/communities/tech-enthusiasts/posts/1/rate/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 946, in get_or_create
+    return self.get(**kwargs), False
+           ~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.PostRating.DoesNotExist: PostRating matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/apps/config.py", line 235, in get_model
+    return self.models[model_name.lower()]
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/backend/community_api/views.py", line 1028, in rate
+    post_rating, created = PostRating.objects.get_or_create(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        personal_post=post,
+        ^^^^^^^^^^^^^^^^^^^
+        user=request.user,
+        ^^^^^^^^^^^^^^^^^^
+        defaults={'rating': rating}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 953, in get_or_create
+    return self.create(**params), True
+           ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 677, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/backend/community/models.py", line 423, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+    ~~~~~~~~~~~~~~^
+        sender=origin,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        using=using,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/assistant/models.py", line 828, in analyze_post_rating
+    models = get_community_models()
+  File "/home/superlink/superlink/backend/assistant/models.py", line 21, in get_community_models
+    'Post': apps.get_model('community', 'Post'),
+            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/apps/registry.py", line 213, in get_model
+    return app_config.get_model(model_name, require_ready=require_ready)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/apps/config.py", line 237, in get_model
+    raise LookupError(
+        "App '%s' doesn't have a '%s' model." % (self.label, model_name)
+    )
+LookupError: App 'community' doesn't have a 'Post' model.
+WARNING 2025-06-25 15:36:50,990 log 34197 140047264245440 Not Found: /favicon.ico
+WARNING 2025-06-25 15:47:08,916 log 34197 140047264245440 Method Not Allowed: /api/communities/tech-enthusiasts/posts/1/rate/
+ERROR 2025-06-25 15:47:43,713 log 34197 140046862640832 Internal Server Error: /api/communities/tech-enthusiasts/posts/1/rate/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/backend/community_api/views.py", line 1023, in rate
+    rating = float(rating)
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+WARNING 2025-06-25 15:48:11,658 log 34197 140047273686720 Method Not Allowed: /api/communities/tech-enthusiasts/posts/1/rate/
+WARNING 2025-06-25 15:50:02,239 log 34197 140046871033536 Method Not Allowed: /api/communities/tech-enthusiasts/posts/1/rate/
+WARNING 2025-06-25 15:50:14,517 log 34197 140046845855424 Method Not Allowed: /api/communities/tech-enthusiasts/posts/1/rate/
+WARNING 2025-06-25 15:50:19,313 log 34197 140047264245440 Method Not Allowed: /api/communities/tech-enthusiasts/posts/1/rate/
+WARNING 2025-06-25 15:50:24,318 log 34197 140046862640832 Method Not Allowed: /api/communities/tech-enthusiasts/posts/1/rate/
+WARNING 2025-06-25 16:21:16,458 log 50327 140477894481600 Unauthorized: /api/auth/user/
+WARNING 2025-06-25 16:21:16,461 log 50327 140477894481600 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-06-26 07:45:52,651 log 47264 139658293925568 Not Found: /api/saved-posts/unsave/
+WARNING 2025-06-26 07:46:18,506 log 47264 139658293925568 Not Found: /api/saved-posts/unsave/
+WARNING 2025-06-26 07:46:38,469 log 47264 139658293925568 Not Found: /api/saved-posts/unsave/
+WARNING 2025-06-26 07:47:07,348 log 47264 139658293925568 Not Found: /api/saved-posts/unsave/
+WARNING 2025-06-26 07:47:30,009 log 47264 139658677569216 Not Found: /favicon.ico
+ERROR 2025-06-26 07:56:13,213 log 47264 139658677569216 Internal Server Error: /api/communities/music-makers/posts/2/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'community_post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 1179, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        sender=model,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        origin=self.origin,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 607, in update_reply_rating_on_delete
+    post = reply.comment.personal_post or reply.comment.community_post
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 253, in __get__
+    rel_obj = self.get_object(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 216, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.CommunityPost.DoesNotExist: CommunityPost matching query does not exist.
+ERROR 2025-06-26 07:58:35,172 log 56193 139928004449984 Internal Server Error: /api/communities/music-makers/posts/2/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'community_post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 1179, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        sender=model,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        origin=self.origin,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 607, in update_reply_rating_on_delete
+    post = reply.comment.personal_post or reply.comment.community_post
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 253, in __get__
+    rel_obj = self.get_object(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 216, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.CommunityPost.DoesNotExist: CommunityPost matching query does not exist.
+ERROR 2025-06-26 07:59:01,837 log 56193 139928004449984 Internal Server Error: /api/communities/music-makers/posts/2/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'community_post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 1179, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        sender=model,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        origin=self.origin,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 607, in update_reply_rating_on_delete
+    post = reply.comment.personal_post or reply.comment.community_post
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 253, in __get__
+    rel_obj = self.get_object(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 216, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.CommunityPost.DoesNotExist: CommunityPost matching query does not exist.
+ERROR 2025-06-26 08:02:16,444 log 57695 139784189105856 Internal Server Error: /api/communities/music-makers/posts/2/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'community_post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 1179, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        sender=model,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        origin=self.origin,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 614, in update_reply_rating_on_delete
+    community_post = getattr(reply.comment, 'community_post', None)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 253, in __get__
+    rel_obj = self.get_object(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 216, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.CommunityPost.DoesNotExist: CommunityPost matching query does not exist.
+ERROR 2025-06-26 08:06:05,300 log 59403 140330517681856 Internal Server Error: /api/communities/music-makers/posts/2/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'community_post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 1179, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        sender=model,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        origin=self.origin,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 551, in update_comment_rating_on_delete
+    comment.save()
+    ~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/backend/community/models.py", line 372, in save
+    self.clean()
+    ~~~~~~~~~~^^
+  File "/home/superlink/superlink/backend/community/models.py", line 368, in clean
+    if bool(self.personal_post) == bool(self.community_post):
+                                        ^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 253, in __get__
+    rel_obj = self.get_object(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 216, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.CommunityPost.DoesNotExist: CommunityPost matching query does not exist.
+ERROR 2025-06-26 08:07:34,930 log 61259 140397766497984 Internal Server Error: /api/communities/music-makers/posts/2/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'community_post'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 1179, in delete
+    return collector.delete()
+           ~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        sender=model,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        origin=self.origin,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 553, in update_comment_rating_on_delete
+    comment.save()
+    ~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/backend/community/models.py", line 375, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+    ~~~~~~~~~~~~~~^
+        sender=origin,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        using=using,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/superlink/superlink/backend/community/models.py", line 646, in update_post_comment_count
+    post = instance.personal_post or instance.community_post
+                                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 253, in __get__
+    rel_obj = self.get_object(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_descriptors.py", line 216, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+community.models.CommunityPost.DoesNotExist: CommunityPost matching query does not exist.
+WARNING 2025-06-26 09:25:32,570 log 1773 140026901583552 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 09:25:32,602 log 1773 140026901583552 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 09:29:20,671 log 1773 140026901583552 Not Found: /favicon.ico
+WARNING 2025-06-26 10:09:10,449 log 1773 140026901583552 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 10:40:19,131 log 1773 140026901583552 Not Found: /communities/user
+WARNING 2025-06-26 10:40:19,234 log 1773 140026901583552 Not Found: /communities/user
+WARNING 2025-06-26 10:40:23,381 log 1773 140026901583552 Not Found: /communities/user
+WARNING 2025-06-26 10:44:35,860 log 1773 140026901583552 Not Found: /communities/user
+WARNING 2025-06-26 10:44:35,929 log 1773 140026901583552 Not Found: /communities/user
+WARNING 2025-06-26 10:54:07,029 log 1773 140026901583552 Not Found: /api/connections/friends/
+WARNING 2025-06-26 10:54:07,202 log 1773 140026901583552 Not Found: /api/connections/friends/
+WARNING 2025-06-26 10:54:46,446 log 1773 140026901583552 Not Found: /api/connections/friends/
+WARNING 2025-06-26 10:54:47,017 log 1773 140026901583552 Not Found: /api/connections/friends/
+WARNING 2025-06-26 10:59:44,037 log 1773 140026901583552 Not Found: /api/connections/friends/
+WARNING 2025-06-26 10:59:44,206 log 1773 140026901583552 Not Found: /api/connections/friends/
+WARNING 2025-06-26 11:19:47,774 log 1773 140026901583552 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-26 11:19:47,781 log 1773 140025933067968 Unauthorized: /api/communities/user/
+WARNING 2025-06-26 11:19:47,786 log 1773 140025924675264 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-26 11:19:47,800 log 1773 140026901583552 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-26 11:19:47,832 log 1773 140025933067968 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-26 11:19:47,876 log 1773 140025924675264 Unauthorized: /api/auth/profile/
+WARNING 2025-06-26 12:21:52,578 log 1793 139624756278976 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 12:21:52,662 log 1793 139624756278976 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 12:23:44,184 log 1793 139624756278976 Not Found: /api/saved-posts/save/
+WARNING 2025-06-26 12:23:51,251 log 1793 139624756278976 Not Found: /api/saved-posts/unsave/
+WARNING 2025-06-26 12:50:30,910 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 12:51:54,329 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 12:54:35,180 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 12:54:53,468 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:00:32,005 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:00:34,470 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:01:02,060 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:14:23,652 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/
+WARNING 2025-06-26 13:14:29,987 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/
+WARNING 2025-06-26 13:14:38,221 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/
+WARNING 2025-06-26 13:17:04,059 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/
+WARNING 2025-06-26 13:20:19,645 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/
+WARNING 2025-06-26 13:21:21,257 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/
+WARNING 2025-06-26 13:23:18,219 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:30:38,144 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:37:24,838 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/update/
+WARNING 2025-06-26 13:37:24,901 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/update/
+WARNING 2025-06-26 13:37:52,239 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/update/
+WARNING 2025-06-26 13:37:52,291 log 1793 139624756278976 Method Not Allowed: /api/auth/profile/update/
+WARNING 2025-06-26 13:44:48,623 log 1793 139624756278976 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:31,560 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:32,917 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:33,199 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:33,394 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:33,560 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:33,737 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:46:33,944 log 1793 139624756278976 Bad Request: /api/auth/profile/update/
+WARNING 2025-06-26 13:50:38,328 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:50:39,446 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:50:42,479 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:50:43,551 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:50:52,817 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:50:55,167 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:51:06,743 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:51:10,615 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:51:15,743 log 1793 139624756278976 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-26 13:52:36,458 log 1793 139624756278976 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:52:47,403 log 1793 139624756278976 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:52:50,594 log 1793 139624756278976 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:52:55,692 log 1793 139624756278976 Not Found: /favicon.ico
+WARNING 2025-06-26 13:53:06,890 log 1793 139624712918720 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:54:38,496 log 1793 139624712918720 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:56:04,298 log 1793 139624712918720 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:56:06,406 log 1793 139624712918720 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:56:20,048 log 1793 139624712918720 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 13:56:20,976 log 1793 139624712918720 Not Found: /media/avatars/default.jpeg
+WARNING 2025-06-26 16:12:48,182 log 80349 139913168275136 Unauthorized: /api/auth/login/
+WARNING 2025-06-26 16:12:58,412 log 80349 139912644912832 Unauthorized: /api/auth/login/
+WARNING 2025-06-26 16:50:35,912 log 142022 140516423362240 Unauthorized: /api/auth/personality-tags/
+WARNING 2025-06-26 16:51:25,678 log 142022 140516423362240 Unauthorized: /api/auth/personality-tags/
+WARNING 2025-06-26 17:22:53,766 log 142022 140516423362240 Bad Request: /api/auth/register/
+WARNING 2025-06-26 17:26:19,551 log 142022 140516423362240 Bad Request: /api/auth/register/
+WARNING 2025-06-26 17:37:47,635 log 142022 140516423362240 Bad Request: /api/auth/register/
+WARNING 2025-06-26 17:43:35,932 log 142022 140516423362240 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-26 17:43:35,935 log 142022 140515878098624 Unauthorized: /api/auth/profile/
+WARNING 2025-06-26 17:43:36,014 log 142022 140515894884032 Unauthorized: /api/auth/profile/
+WARNING 2025-06-26 17:43:36,018 log 142022 140515852920512 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-26 17:43:39,478 log 142022 140516423362240 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-26 17:43:39,501 log 142022 140515878098624 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-26 17:43:39,521 log 142022 140515852920512 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-26 17:43:39,529 log 142022 140515894884032 Unauthorized: /api/communities/user/
+WARNING 2025-06-26 17:43:39,547 log 142022 140516423362240 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-26 17:43:39,634 log 142022 140515878098624 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-26 17:43:39,691 log 142022 140515852920512 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-26 17:43:39,732 log 142022 140515894884032 Unauthorized: /api/communities/user/
+WARNING 2025-06-26 17:43:39,741 log 142022 140516423362240 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-26 17:43:39,765 log 142022 140515878098624 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-26 17:43:42,705 log 142022 140515852920512 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 17:43:42,763 log 142022 140515894884032 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 17:43:42,830 log 142022 140516423362240 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 17:43:42,886 log 142022 140515878098624 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 17:48:43,766 log 142022 140515852920512 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-26 17:48:43,794 log 142022 140515894884032 Unauthorized: /api/auth/user/
+WARNING 2025-06-26 17:48:43,824 log 142022 140516423362240 Unauthorized: /api/auth/profile/
+WARNING 2025-06-26 17:48:43,843 log 142022 140515878098624 Unauthorized: /api/notifications/preferences/
+WARNING 2025-06-26 17:48:43,846 log 142022 140515852920512 Unauthorized: /api/notifications/notifications/
+WARNING 2025-06-26 17:48:43,902 log 142022 140515894884032 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-26 17:48:43,930 log 142022 140516423362240 Unauthorized: /api/auth/profile/
+WARNING 2025-06-26 17:48:43,981 log 142022 140515878098624 Unauthorized: /api/notifications/preferences/
+WARNING 2025-06-26 17:48:44,063 log 142022 140515852920512 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:09:50,873 log 3332 140019490617024 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:09:50,919 log 3332 140019490617024 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:10:12,075 log 3332 140019490617024 Not Found: /favicon.ico
+WARNING 2025-06-27 06:10:36,935 log 3332 140019481175744 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 06:10:36,945 log 3332 140018953746112 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 06:10:36,990 log 3332 140018936960704 Unauthorized: /api/communities/user/
+WARNING 2025-06-27 06:10:36,993 log 3332 140019490617024 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-27 06:10:37,013 log 3332 140019481175744 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-27 06:10:37,199 log 3332 140018953746112 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 06:10:37,211 log 3332 140018936960704 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 06:10:37,254 log 3332 140019490617024 Unauthorized: /api/communities/user/
+WARNING 2025-06-27 06:10:37,284 log 3332 140019481175744 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-27 06:10:37,285 log 3332 140018953746112 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-27 06:10:38,526 log 3332 140018936960704 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:10:38,648 log 3332 140019490617024 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:10:38,797 log 3332 140019481175744 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:10:38,851 log 3332 140018953746112 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 06:16:42,791 log 5531 139929933821632 Bad Request: /api/auth/register/
+WARNING 2025-06-27 06:17:48,617 log 5531 139929933821632 Bad Request: /api/auth/register/
+WARNING 2025-06-27 06:19:00,234 log 5531 139929933821632 Bad Request: /api/auth/register/
+WARNING 2025-06-27 06:30:43,793 log 5531 139929933821632 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:30:43,864 log 5531 139929933821632 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:32:13,129 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:13,241 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:13,317 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:13,364 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:29,216 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:29,240 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:29,346 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:32:29,382 log 5531 139929933821632 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 06:36:47,562 log 5531 139929933821632 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:36:47,690 log 5531 139929933821632 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:37:14,590 log 5531 139929933821632 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:45:51,987 log 24412 139994366723776 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:45:52,069 log 24412 139994366723776 Forbidden: /api/auth/profile/wrightvincent/
+WARNING 2025-06-27 06:51:38,591 log 24412 139994366723776 Not Found: /api/communities/null/posts/3/
+WARNING 2025-06-27 06:51:38,658 log 24412 139994366723776 Not Found: /api/communities/null/posts/3/
+WARNING 2025-06-27 06:53:37,286 log 24412 139994391901888 Not Found: /api/communities/null/posts/3/
+WARNING 2025-06-27 06:53:37,358 log 24412 139994366723776 Not Found: /api/communities/null/posts/3/
+WARNING 2025-06-27 06:57:02,401 log 24412 139994366723776 Not Found: /api/communities/posts/6/rate/
+WARNING 2025-06-27 06:59:44,539 log 24412 139994366723776 Not Found: /api/communities/posts/6/rate/
+WARNING 2025-06-27 07:00:12,322 log 24412 139994366723776 Not Found: /api/communities/posts/6/rate/
+WARNING 2025-06-27 07:10:46,063 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:12:05,124 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:12:08,467 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:14:06,433 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:14:11,438 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:16:29,663 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:16:29,736 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:17:45,919 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:17:45,992 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:19:04,762 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:19:11,773 log 24412 139994391901888 Not Found: /api/communities/posts/5/rate/
+WARNING 2025-06-27 07:21:05,140 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:21:14,878 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:21:18,187 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:22:56,719 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:23:02,329 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:24:46,242 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:24:46,319 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:24:57,755 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:24:57,810 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:28:14,444 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:28:18,280 log 24412 139994391901888 Not Found: /api/communities/posts/4/rate/
+WARNING 2025-06-27 07:55:14,037 log 51656 140704630154944 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:55:14,274 log 51656 140704662677184 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:55:14,398 log 51656 140704034567872 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:55:14,502 log 51656 140704026175168 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:57:07,015 log 51656 140704630154944 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:57:07,094 log 51656 140704662677184 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:57:07,157 log 51656 140704034567872 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:57:07,238 log 51656 140704026175168 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:57:07,328 log 51656 140704630154944 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 07:57:07,365 log 51656 140704662677184 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 08:00:33,187 log 51656 140704034567872 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 08:00:33,257 log 51656 140704026175168 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 08:00:33,366 log 51656 140704630154944 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 08:00:33,449 log 51656 140704662677184 Bad Request: /api/chat/conversations/
+WARNING 2025-06-27 09:53:32,230 log 118385 139847423489728 Not Found: /api/users/update_profile/
+WARNING 2025-06-27 09:56:09,085 log 127145 140181592061632 Not Found: /api/users/update_profile/
+WARNING 2025-06-27 09:57:15,408 log 127145 140181592061632 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-27 09:57:16,865 log 127145 140181592061632 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-27 09:57:46,339 log 127145 140181592061632 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-27 09:58:51,526 log 127145 140181592061632 Forbidden: /api/auth/profile/update/
+WARNING 2025-06-27 10:12:20,548 log 134556 140355815065280 Not Found: /api/users/change_password/
+WARNING 2025-06-27 10:14:06,214 log 134556 140355815065280 Unauthorized: /api/auth/login/
+WARNING 2025-06-27 11:12:53,999 log 134556 140355815065280 Unauthorized: /api/auth/login/
+WARNING 2025-06-27 11:12:56,910 log 134556 140355815065280 Unauthorized: /api/auth/login/
+WARNING 2025-06-27 11:12:58,703 log 134556 140355815065280 Unauthorized: /api/auth/login/
+WARNING 2025-06-27 11:13:15,504 log 134556 140355815065280 Unauthorized: /api/auth/login/
+WARNING 2025-06-27 13:55:25,324 log 134556 140355832551104 Unauthorized: /api/communities/user/
+WARNING 2025-06-27 13:55:25,327 log 134556 140355815065280 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 13:55:25,337 log 134556 140355806672576 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 13:55:25,352 log 134556 140355832551104 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-27 13:55:25,367 log 134556 140355815065280 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-27 13:55:25,527 log 134556 140355806672576 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 13:55:25,527 log 134556 140355832551104 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-27 13:55:25,539 log 134556 140355806672576 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-27 13:55:25,542 log 134556 140355815065280 Unauthorized: /api/communities/user/
+WARNING 2025-06-27 13:55:25,548 log 134556 140355832551104 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-27 16:28:29,212 log 134556 140355832551104 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-27 16:28:29,220 log 134556 140355806672576 Unauthorized: /api/auth/profile/
+WARNING 2025-06-27 16:28:29,244 log 134556 140355815065280 Unauthorized: /api/auth/work-experience/
+WARNING 2025-06-27 16:28:29,250 log 134556 140355832551104 Unauthorized: /api/auth/profile/
+WARNING 2025-06-27 16:28:43,728 log 134556 140355806672576 Unauthorized: /api/auth/user/
+WARNING 2025-06-27 16:28:43,933 log 134556 140355815065280 Unauthorized: /api/auth/user/
+WARNING 2025-06-28 09:03:48,878 log 88062 140139290273472 Unauthorized: /api/auth/user/
+WARNING 2025-06-28 09:03:48,914 log 88062 140139290273472 Unauthorized: /api/auth/user/
+WARNING 2025-06-28 09:06:17,135 log 88062 140139035600576 Not Found: /favicon.ico
+WARNING 2025-06-28 13:20:21,851 log 217071 139964206388928 Unauthorized: /api/auth/user/
+WARNING 2025-06-28 13:20:21,883 log 217071 139964206388928 Unauthorized: /api/auth/user/
+WARNING 2025-06-29 06:06:30,520 log 3369 140573096654528 Unauthorized: /api/auth/user/
+WARNING 2025-06-29 06:06:30,528 log 3369 140573096654528 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-06-29 06:06:30,566 log 3369 140573096654528 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-06-29 06:06:30,571 log 3369 140573096654528 Unauthorized: /api/auth/user/
+WARNING 2025-06-29 07:07:48,944 log 3369 140573096654528 Unauthorized: /api/communities/trending-topics/
+WARNING 2025-06-29 07:07:48,987 log 3369 140573096654528 Unauthorized: /api/communities/user/
+WARNING 2025-06-29 07:07:48,988 log 3369 140573096654528 Unauthorized: /api/communities/discover/
+WARNING 2025-06-29 07:07:49,105 log 3369 140573096654528 Unauthorized: /api/communities/trending-topics/
+WARNING 2025-06-29 07:07:49,115 log 3369 140572820219584 Unauthorized: /api/communities/user/
+WARNING 2025-06-29 07:07:49,136 log 3369 140573096654528 Unauthorized: /api/communities/discover/
+ERROR 2025-06-29 07:07:50,116 log 3369 140572820219584 Internal Server Error: /api/communities/discover/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1510, in build_filter
+    join_info = self.setup_joins(
+        parts,
+    ...<3 lines>...
+        allow_many=allow_many,
+    )
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1856, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1785, in names_to_path
+    raise MultiJoin(pos + 1, names_with_path)
+django.db.models.sql.datastructures.MultiJoin: (1, [('members', [PathInfo(from_opts=<Options for Community>, to_opts=<Options for CommunityMember>, target_fields=(<django.db.models.fields.BigAutoField: id>,), join_field=<ManyToOneRel: community.communitymember>, m2m=True, direct=False, filtered_relation=None)])])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2112, in get_prep_value
+    return int(value)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 437, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/backend/community_api/views.py", line 170, in discover
+    communities = Community.objects.exclude(
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        members__user=request.user
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).filter(is_private=False).annotate(
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1484, in exclude
+    return self._filter_or_exclude(True, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude_inplace
+    self._query.add_q(~Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1602, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1634, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1527, in build_filter
+    return self.split_exclude(filter_expr, can_reuse, e.names_with_path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 2051, in split_exclude
+    query.add_filter(filter_lhs, filter_rhs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1586, in add_filter
+    self.add_q(Q((filter_lhs, filter_rhs)))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1602, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1634, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1548, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1378, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2114, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7fd9aa12c410>.
+WARNING 2025-06-29 08:11:47,671 log 2662 140525526304448 Unauthorized: /api/connections/
+WARNING 2025-06-29 08:11:47,762 log 2662 140525526304448 Unauthorized: /api/connections/
+WARNING 2025-06-29 08:12:03,993 log 2662 140525526304448 Unauthorized: /api/auth/user/
+WARNING 2025-06-29 08:12:04,140 log 2662 140525526304448 Unauthorized: /api/auth/user/
+ERROR 2025-06-29 08:34:28,286 log 2662 140525526304448 Internal Server Error: /api/chat/conversations/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2112, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/superlink/superlink/backend/chat_api/views.py", line 261, in perform_create
+    other_user = User.objects.get(id=other_user_id)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 633, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1602, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1634, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1548, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1378, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 362, in get_prep_lookup
+    return super().get_prep_lookup()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 88, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2114, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+ValueError: Field 'id' expected a number but got ''.
+ERROR 2025-06-29 08:34:29,604 log 2662 140525526304448 Internal Server Error: /api/chat/conversations/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2112, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/superlink/superlink/backend/chat_api/views.py", line 261, in perform_create
+    other_user = User.objects.get(id=other_user_id)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 633, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1602, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1634, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1548, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1378, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 362, in get_prep_lookup
+    return super().get_prep_lookup()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 88, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2114, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+ValueError: Field 'id' expected a number but got ''.
+WARNING 2025-06-29 09:14:51,058 log 2662 140525517911744 Unauthorized: /api/communities/user/
+WARNING 2025-06-29 09:14:51,059 log 2662 140525526304448 Unauthorized: /api/connections/connections/discover/
+WARNING 2025-06-29 09:14:51,089 log 2662 140525526304448 Unauthorized: /api/communities/user/
+WARNING 2025-06-29 09:14:51,091 log 2662 140525517911744 Unauthorized: /api/connections/connections/discover/
+WARNING 2025-06-29 09:14:51,171 log 2662 140525526304448 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-06-29 09:14:51,202 log 2662 140525517911744 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-06-29 10:17:41,636 log 83999 139799482582720 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-29 10:17:41,645 log 83999 139800019453632 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-29 10:17:41,649 log 83999 139799482582720 Unauthorized: /api/communities/user/
+WARNING 2025-06-29 10:17:41,663 log 83999 139799482582720 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-29 10:17:41,665 log 83999 139800019453632 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-29 10:17:41,673 log 83999 139799482582720 Unauthorized: /api/auth/user/
+WARNING 2025-06-29 10:17:41,766 log 83999 139800019453632 Unauthorized: /api/notifications/notifications/
+WARNING 2025-06-29 10:17:41,825 log 83999 139799482582720 Unauthorized: /api/connections/connections/friends/
+WARNING 2025-06-29 10:17:41,825 log 83999 139800019453632 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-29 10:17:41,834 log 83999 139800002668224 Unauthorized: /api/notifications/preferences/
+WARNING 2025-06-29 10:17:41,932 log 83999 139800019453632 Unauthorized: /api/communities/posts/feed/
+WARNING 2025-06-29 10:17:41,944 log 83999 139799482582720 Unauthorized: /api/communities/user/
+WARNING 2025-06-29 10:17:41,998 log 83999 139800002668224 Unauthorized: /api/connections/alchemy-suggestions/
+WARNING 2025-06-29 10:17:42,012 log 83999 139800019453632 Unauthorized: /api/notifications/preferences/
+ERROR 2025-06-29 10:17:42,535 log 83999 139799482582720 Internal Server Error: /api/auth/user/
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/files/storage/handler.py", line 35, in __getitem__
+    return self._storages[alias]
+           ~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/files/storage/handler.py", line 52, in create_storage
+    storage_cls = import_string(backend)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cloudinary_storage'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/superlink/superlink/backend/api/views.py", line 36, in get_user
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/backend/api/serializers.py", line 448, in to_representation
+    data = super().to_representation(instance)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/rest_framework/fields.py", line 1517, in to_representation
+    url = value.url
+          ^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/db/models/fields/files.py", line 67, in url
+    return self.storage.url(self.name)
+           ^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+    ~~~~~~~~~~~^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/files/storage/__init__.py", line 42, in _setup
+    self._wrapped = storages[DEFAULT_STORAGE_ALIAS]
+                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/files/storage/handler.py", line 43, in __getitem__
+    storage = self.create_storage(params)
+  File "/home/superlink/superlink/venv/lib/python3.13/site-packages/django/core/files/storage/handler.py", line 54, in create_storage
+    raise InvalidStorageError(f"Could not find backend {backend!r}: {e}") from e
+django.core.files.storage.handler.InvalidStorageError: Could not find backend 'cloudinary_storage.storage.MediaCloudinaryStorage': No module named 'cloudinary_storage'
+WARNING 2025-06-29 10:53:11,771 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:53:14,063 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:53:34,284 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:53:40,262 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:54:46,172 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:54:48,517 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:54:51,286 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:55:03,968 log 96995 139690962863808 Not Found: /favicon.ico
+WARNING 2025-06-29 10:55:59,765 log 96995 139690421237440 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 10:56:40,610 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:00:04,656 log 96995 139690421237440 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:00:05,359 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:00:21,248 log 96995 139690421237440 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:00:21,359 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:00:21,388 log 96995 139690421237440 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:03:41,126 log 96995 139690962863808 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
+WARNING 2025-06-29 11:08:00,415 log 96995 139690412844736 Not Found: /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png
