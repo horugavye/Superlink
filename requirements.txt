@@ -62,4 +62,7 @@ azure-core>=1.29.5
 azure-cognitiveservices-speech>=1.31.0
 drf-nested-routers>=0.93.4
 Pillow>=10.2.0
-
+mistralai
+django-filter
+cloudinary
+django-cloudinary-storage
