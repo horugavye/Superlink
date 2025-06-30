@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-2ht__ov-d)q^19bi&gzsn8-=h$w7&z1&s$@8o#wgt)a-c=c)bh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -60,8 +60,9 @@ INSTALLED_APPS = [
     'chat',
     'chat_api',
     'stories',
+    'cloudinary',
+    'cloudinary_storage',
 ]
-
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -99,15 +100,13 @@ ASGI_APPLICATION = 'superlink.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'superlinkdata',
-        'USER': 'horugavye',
-        'PASSWORD': 'superlinkdata',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.parse(
+        'postgresql://superlink_user:OtlelJjz1Desy5AmhjOhN5A0opD5Q1MM@dpg-d1gji5emcj7s73cs2bug-a/superlink',
+        conn_max_age=600
+    )
 }
 
 
@@ -156,8 +155,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
 
 # Add these settings for handling media files (for avatar uploads)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dpyhgeom3',
+    'API_KEY': '716918598439173',
+    'API_SECRET': 'YI-C4OVwxhvver_0LkFk9ivQ2No'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -184,16 +190,7 @@ SIMPLE_JWT = {
 }
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Vite default dev server
-    "http://127.0.0.1:5173",
-    "http://localhost:3000",  # React default dev server
-    "http://127.0.0.1:3000",
-    # Add your Vercel frontend domain here
-    "https://superlinkapp.vercel.app",  # Your Vercel domain
-    "https://superlink.vercel.app",     # Alternative Vercel domain
-    "https://your-app-name.vercel.app",  # Replace with your actual Vercel domain
-    "https://your-custom-domain.com",    # Replace with your custom domain if any
+CORS_ALLOWED_ORIGINS = [ "https://superlinkapp.vercel.app",
 ]
 
 # Allow all Vercel preview deployments
@@ -258,29 +255,15 @@ CORS_EXPOSE_HEADERS = [
 
 # Add CORS trusted origins
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
     'https://superlinkapp.vercel.app',
-    'https://superlink.vercel.app',
-    'https://*.vercel.app',
 ]
 
 # WebSocket settings
-CHANNELS_WS_ALLOWED_HOSTS = ['*']
+CHANNELS_WS_ALLOWED_HOSTS = ["superlinkapp.vercel.app",]
 CHANNELS_WS_PROTOCOLS = ['websocket']
 CORS_ALLOW_WEBSOCKETS = True
 CORS_ALLOW_WEBSOCKET_ORIGINS = [
-    "ws://localhost:8000",
-    "ws://127.0.0.1:8000",
-    "wss://localhost:8000",
-    "wss://127.0.0.1:8000",
-    "ws://localhost:5173",
-    "ws://127.0.0.1:5173",
-    "wss://localhost:5173",
-    "wss://127.0.0.1:5173",
-    # Add Vercel WebSocket origins
     "wss://superlinkapp.vercel.app",
-    "wss://superlink.vercel.app",
     "wss://*.vercel.app",  # Allow all Vercel subdomains
 ]
 
@@ -370,11 +353,11 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1', 6379)],
-            'capacity': 1500,  # Maximum number of messages that can be in a channel layer
-            'expiry': 3600,  # Message expiry in seconds
-            'symmetric_encryption_keys': [SECRET_KEY],  # Encrypt messages
-            'prefix': 'superlink:',  # Redis key prefix
+            'hosts': [('red-d1ggfnili9vc73akg7f0', 6379)],
+            'capacity': 1500,
+            'expiry': 3600,
+            'symmetric_encryption_keys': [SECRET_KEY],
+            'prefix': 'superlink:',
         },
     },
 }
@@ -416,7 +399,7 @@ SERVER_SETTINGS = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',
+        'LOCATION': 'redis://red-d1ggfnili9vc73akg7f0:6379/1',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             'SOCKET_CONNECT_TIMEOUT': 5,
@@ -428,6 +411,7 @@ CACHES = {
         'KEY_PREFIX': 'superlink',
     }
 }
+
 
 # Session Configuration
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
@@ -453,12 +437,17 @@ AZURE_AI_API_KEY = os.environ.get('AZURE_AI_API_KEY', '')
 AZURE_AI_MODEL = os.environ.get('AZURE_AI_MODEL', 'openai/gpt-4.1')
 
 # Celery configuration
-CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', 'redis://localhost:6379/0')
-CELERY_RESULT_BACKEND = os.environ.get('CELERY_RESULT_BACKEND', 'redis://localhost:6379/0')
+CELERY_BROKER_URL = os.environ.get(
+    'CELERY_BROKER_URL', 'redis://red-d1ggfnili9vc73akg7f0:6379/0'
+)
+CELERY_RESULT_BACKEND = os.environ.get(
+    'CELERY_RESULT_BACKEND', 'redis://red-d1ggfnili9vc73akg7f0:6379/0'
+)
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
+
 
 from celery.schedules import crontab
 CELERY_BEAT_SCHEDULE = {
