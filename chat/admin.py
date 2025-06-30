@@ -35,7 +35,10 @@ class GroupAdmin(admin.ModelAdmin):
     )
 
     def member_count(self, obj):
-        return obj.members.count()
+        conversation = obj.conversations.first()
+        if conversation:
+            return conversation.members.count()
+        return 0
     member_count.short_description = 'Members'
 
     def status(self, obj):
@@ -43,8 +46,11 @@ class GroupAdmin(admin.ModelAdmin):
     status.short_description = 'Status'
 
     def view_members(self, obj):
-        members = obj.members.all()
-        return format_html('<br>'.join([f'{member.username}' for member in members]))
+        conversation = obj.conversations.first()
+        if conversation:
+            members = conversation.members.all()
+            return format_html('<br>'.join([f'{member.user.username}' for member in members]))
+        return "-"
     view_members.short_description = 'Members'
 
     def make_private(self, request, queryset):

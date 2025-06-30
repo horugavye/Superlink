@@ -12,11 +12,10 @@ from stories.models import Story  # Add this import at the top
 User = settings.AUTH_USER_MODEL
 
 class Group(models.Model):
-    DEFAULT_GROUP_AVATAR = 'avatars/groudefault.jpeg'
     
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    avatar = models.ImageField(upload_to='group_avatars/', null=True, blank=True, default=DEFAULT_GROUP_AVATAR)
+    avatar = models.ImageField(upload_to='group_avatars/', null=True, blank=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='created_groups')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

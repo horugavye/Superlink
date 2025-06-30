@@ -6,10 +6,9 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class User(AbstractUser):
-    DEFAULT_AVATAR = 'avatars/default.jpg'
     
     bio = models.TextField(blank=True)
-    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True, default=DEFAULT_AVATAR)
+    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     cover_photo = models.ImageField(upload_to='covers/', null=True, blank=True)
     personal_story = models.TextField(blank=True)
     location = models.CharField(max_length=255, blank=True)

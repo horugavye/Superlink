@@ -119,7 +119,7 @@ class GroupViewSet(viewsets.ModelViewSet):
         
         # Get member IDs from request data
         member_ids = self.request.data.get('memberIds', [])
-        print(f"Received member IDs: {member_ids}")
+        print(f"Received member IDs: {member_ids} (type: {type(member_ids)})")
         print(f"Request user ID: {self.request.user.id}")
         
         # Create the group
@@ -148,11 +148,12 @@ class GroupViewSet(viewsets.ModelViewSet):
         
         # Add initial members
         print("\nAdding initial members...")
-        for member_id in member_ids:
+        for idx, member_id in enumerate(member_ids):
+            print(f"Processing member_id[{idx}]: {member_id} (type: {type(member_id)})")
             try:
                 # Convert member_id to integer if it's a string
-                member_id = int(member_id)
-                user = User.objects.get(id=member_id)
+                member_id_int = int(member_id)
+                user = User.objects.get(id=member_id_int)
                 if user != self.request.user:  # Skip creator as they're already added
                     # Add member to conversation
                     member = ConversationMember.objects.create(
@@ -160,11 +161,17 @@ class GroupViewSet(viewsets.ModelViewSet):
                         user=user,
                         role='member'
                     )
-                    print(f"Added member {user.id} ({user.username}) to conversation with ID: {member.id}")
+                    print(f"Added member {user.id} ({getattr(user, 'username', str(user))}) to conversation with ID: {member.id}")
                 else:
                     print(f"Skipping creator {user.id} as they're already added as admin")
-            except (User.DoesNotExist, ValueError) as e:
-                print(f"Error adding member {member_id}: {str(e)}")
+            except User.DoesNotExist:
+                print(f"Error: User with id {member_id} does not exist.")
+                continue
+            except ValueError as ve:
+                print(f"Error: member_id {member_id} could not be converted to int. Exception: {ve}")
+                continue
+            except Exception as e:
+                print(f"Unexpected error adding member {member_id}: {str(e)}")
                 continue
         
         # Return the created group and conversation IDs

@@ -29,15 +29,13 @@ class Community(models.Model):
         upload_to='community_icons/',
         help_text='Community profile image/icon (recommended size: 256x256px)',
         null=True,
-        blank=True,
-        default='community_icons/default_community_icon.png'
+        blank=True
     )
     banner = models.ImageField(
         upload_to='community_banners/',
         help_text='Community cover photo (recommended size: 1200x400px)',
         null=True,
-        blank=True,
-        default='community_banners/default_community_banner.png'
+        blank=True
     )
     category = models.CharField(max_length=50, choices=[
         ('tech', 'Technology'),
