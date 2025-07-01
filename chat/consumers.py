@@ -423,50 +423,17 @@ class ChatConsumer(AsyncWebsocketConsumer):
                             'type': 'error',
                             'message': str(e)
                         }))
-                elif message_type == 'reaction':
-                    await self.handle_reaction(data)
-                elif message_type == 'typing':
-                    await self.handle_typing(data)
-                elif message_type == 'read':
-                    await self.handle_read(data)
-                elif message_type == 'ping':
-                    await self.handle_ping(data)
-                elif message_type == 'heartbeat':
-                    await self.handle_heartbeat(data)
-                elif message_type == 'message_received':
-                    # Handle message received acknowledgment
-                    message_id = data.get('message_id')
-                    if message_id:
-                        try:
-                            message = await database_sync_to_async(Message.objects.get)(id=message_id)
-                            if message.conversation.is_participant(self.user):
-                                await database_sync_to_async(message.update_status)('delivered')
-                                # Broadcast delivery status
-                                await self.channel_layer.group_send(
-                                    self.room_group_name,
-                                    {
-                                        'type': 'message_status',
-                                        'message_id': message_id,
-                                        'status': 'delivered',
-                                        'user_id': str(self.user.id)
-                                    }
-                                )
-                        except Message.DoesNotExist:
-                            logger.error(f"Message {message_id} not found")
-                        except Exception as e:
-                            logger.error(f"Error updating message status: {str(e)}")
                 else:
-                    logger.warning(f"{Colors.WARNING}Invalid message type: {message_type}{Colors.ENDC}")
+                    # Ignore or reject all other event types
                     await self.send(text_data=json.dumps({
                         'type': 'error',
-                        'error': 'Invalid message type'
+                        'message': 'Only chat_message events are supported on this WebSocket.'
                     }))
         except Exception as e:
-            logger.error(f"Error processing message: {e}")
-            logger.error(f"Stack trace: {traceback.format_exc()}")
+            logger.error(f"[Receive] Unexpected error: {str(e)}", exc_info=True)
             await self.send(text_data=json.dumps({
                 'type': 'error',
-                'message': str(e)
+                'message': f'Unexpected error: {str(e)}'
             }))
 
     async def handle_ping(self, data):
