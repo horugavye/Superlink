@@ -61,7 +61,8 @@ class IsMemberOrAdmin(permissions.BasePermission):
         elif isinstance(obj, MessageThread):
             return obj.parent_message.conversation.members.filter(user=request.user).exists()
         elif isinstance(obj, Message):
-            return obj.conversation.members.filter(user=request.user).exists()
+            # Allow any authenticated user to delete a message
+            return True
         return False
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -647,14 +648,8 @@ class MessageViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated, IsMemberOrAdmin]
 
     def get_queryset(self):
-        conversation_id = self.kwargs.get('conversation_pk')
-        # First check if user is a member of the conversation
-        if not Conversation.objects.filter(
-            id=conversation_id,
-            members__user=self.request.user
-        ).exists():
-            raise PermissionDenied("You are not a member of this conversation")
-        return Message.objects.filter(conversation_id=conversation_id).order_by('created_at')
+        # Allow any authenticated user to access all messages
+        return Message.objects.all()
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
@@ -815,23 +810,13 @@ class MessageViewSet(viewsets.ModelViewSet):
             )
 
     def perform_destroy(self, instance):
-        # Check if user is the sender of the message
-        if instance.sender != self.request.user:
-            raise PermissionDenied("You can only delete your own messages")
-        
-        # Store conversation and message ID for WebSocket notification
+        # Allow any authenticated user to delete any message
         conversation = instance.conversation
         message_id = instance.id
-        
-        # Delete the message
         instance.delete()
-        
-        # Update conversation's last message
         last_message = Message.objects.filter(conversation=conversation).order_by('-created_at').first()
         conversation.last_message = last_message
         conversation.save()
-        
-        # Send WebSocket notification
         channel_layer = get_channel_layer()
         async_to_sync(channel_layer.group_send)(
             f"chat_{conversation.id}",
