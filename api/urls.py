@@ -52,6 +52,7 @@ urlpatterns = [
     path('auth/online-users/', views.online_users, name='online_users'),
     path('connections/', include('connections.urls')),
     path('auth/change-password/', views.change_password, name='change_password'),
+    path('chat/', include('chat.urls')),
 ]
 
 router = DefaultRouter()

@@ -42,7 +42,7 @@ class FileSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name']
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'avatar']
 
 class MessageReactionSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)

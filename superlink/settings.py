@@ -451,8 +451,12 @@ CELERY_TIMEZONE = TIME_ZONE
 
 from celery.schedules import crontab
 CELERY_BEAT_SCHEDULE = {
-    'refresh-suggestions-every-24h': {
-        'task': 'connections.tasks.refresh_all_suggestions',
-        'schedule': crontab(minute=0, hour=3),  # every day at 3am
+    # 'refresh-suggestions-every-24h': {
+    #     'task': 'connections.tasks.refresh_all_suggestions',
+    #     'schedule': crontab(minute=0, hour=3),  # every day at 3am
+    # },
+    'update-all-user-suggestions-every-hour': {
+        'task': 'connections.tasks.update_all_user_suggestions',
+        'schedule': crontab(minute=0),  # every hour at minute 0
     },
 }

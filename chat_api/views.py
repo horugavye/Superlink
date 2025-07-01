@@ -78,40 +78,36 @@ class GroupViewSet(viewsets.ModelViewSet):
         return groups
     
     def get_object(self):
-        print(f"\n=== Getting Group Object ===")
+        print(f"\n=== [DEBUG] GroupViewSet.get_object called ===")
         print(f"Request user: {self.request.user.id}")
         print(f"Group ID from URL: {self.kwargs.get('pk')}")
         print(f"Request method: {self.request.method}")
         print(f"Request path: {self.request.path}")
         print(f"Request data: {self.request.data}")
-        
-        # First check if the group exists
+        group_id = self.kwargs.get('pk')
+        print(f"[DEBUG] Looking for group with ID: {group_id}")
         try:
-            group_id = self.kwargs.get('pk')
-            print(f"Looking for group with ID: {group_id}")
-            
-            # Check if the ID is valid
             if not group_id or not str(group_id).isdigit():
-                print(f"Invalid group ID: {group_id}")
+                print(f"[DEBUG] Invalid group ID: {group_id}")
                 raise Http404("Invalid group ID")
-            
+            group_exists = Group.objects.filter(id=group_id).exists()
+            print(f"[DEBUG] Group exists: {group_exists}")
+            if not group_exists:
+                print(f"[DEBUG] Group {group_id} does not exist in DB")
+                raise Http404("No Group matches the given query.")
             group = Group.objects.get(id=group_id)
-            print(f"Found group: {group.id} - {group.name}")
-            
-            # Then check if user has access
+            print(f"[DEBUG] Found group: {group.id} - {group.name}")
             has_access = group.conversations.filter(members__user=self.request.user).exists()
-            print(f"User has access: {has_access}")
-            
+            print(f"[DEBUG] User {self.request.user.id} has access: {has_access}")
             if not has_access:
-                print(f"User {self.request.user.id} does not have access to group {group.id}")
+                print(f"[DEBUG] User {self.request.user.id} does not have access to group {group.id}")
                 raise PermissionDenied("You don't have access to this group")
-                
             return group
         except Group.DoesNotExist:
-            print(f"Group {self.kwargs.get('pk')} does not exist")
+            print(f"[DEBUG] Group {group_id} does not exist (DoesNotExist exception)")
             raise Http404("No Group matches the given query.")
         except Exception as e:
-            print(f"Unexpected error in get_object: {str(e)}")
+            print(f"[DEBUG] Unexpected error in get_object: {str(e)}")
             raise
     
     def perform_create(self, serializer):
