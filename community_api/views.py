@@ -321,7 +321,7 @@ class CommunityViewSet(viewsets.ModelViewSet):
             status=status.HTTP_200_OK
         )
 
-    @action(detail=False, methods=['post'])
+    @action(detail=True, methods=['post'], url_path='invite/bulk')
     def invite_bulk(self, request, slug=None):
         """Invite multiple users to join the community"""
         logger.info(f'[Backend] Received bulk invite request for community: {slug}')
