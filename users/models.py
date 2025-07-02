@@ -73,6 +73,7 @@ class User(AbstractUser):
     contribution_points = models.IntegerField(default=0)
     profile_completion = models.IntegerField(default=0)
     endorsement_count = models.IntegerField(default=0)
+    email = models.EmailField(unique=True)
 
     class Meta:
         db_table = 'users'

@@ -376,7 +376,17 @@ class CommunityViewSet(viewsets.ModelViewSet):
 
             # Check if user exists with this email
             try:
-                user = User.objects.get(email=email)
+                users = User.objects.filter(email=email)
+                if users.count() == 0:
+                    logger.warning(f'[Backend] User not found for email: {email}')
+                    failed_invites.append({'email': email, 'error': 'User not found'})
+                    continue
+                elif users.count() > 1:
+                    logger.warning(f'[Backend] Duplicate users found for email: {email}')
+                    failed_invites.append({'email': email, 'error': 'Duplicate users with this email'})
+                    continue
+                else:
+                    user = users.first()
             except User.DoesNotExist:
                 logger.warning(f'[Backend] User not found for email: {email}')
                 failed_invites.append({'email': email, 'error': 'User not found'})

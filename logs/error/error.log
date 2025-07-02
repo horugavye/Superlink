@@ -64940,3 +64940,1050 @@ INFO 2025-07-02 08:14:45,666 consumers 55525 139832540001984 [92mChannel name: 
 INFO 2025-07-02 08:14:45,667 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
 INFO 2025-07-02 08:14:45,671 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
 INFO 2025-07-02 08:14:45,674 consumers 55525 139832540001984 [92mRemoved from global chat group[0m
+INFO 2025-07-02 08:19:29,094 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45124]
+INFO 2025-07-02 08:19:29,094 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45124]
+INFO 2025-07-02 08:19:29,125 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:19:29,334 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:19:29,343 consumers 55525 139832540001984 [92m=== Global Chat WebSocket Connection Attempt ===[0m
+INFO 2025-07-02 08:19:29,343 consumers 55525 139832540001984 [92mQuery string: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNDQ1OTE3LCJpYXQiOjE3NTE0NDIzMTcsImp0aSI6IjE1MDc2NGUyZmNkOTRhNmJiMDUyY2M0ZWE3MWNiMDljIiwidXNlcl9pZCI6MX0.m6ly61Zk0ot35p7PCIAhi4ub0HaVaaNvX94VYoQ_Qh8[0m
+INFO 2025-07-02 08:19:29,528 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:45124]
+INFO 2025-07-02 08:19:29,528 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:45124]
+INFO 2025-07-02 08:19:29,528 consumers 55525 139832540001984 [92mWebSocket connection accepted for user horugavye[0m
+INFO 2025-07-02 08:19:29,535 consumers 55525 139832540001984 [92mAdded to global chat group: chat_global[0m
+INFO 2025-07-02 08:19:29,555 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:45138]
+INFO 2025-07-02 08:19:29,555 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:45138]
+INFO 2025-07-02 08:19:29,557 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:19:29,564 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:19:29,667 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:45138]
+INFO 2025-07-02 08:19:29,667 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:45138]
+INFO 2025-07-02 08:19:29,879 views 55525 139831753553600 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:19:29,893 views 55525 139831753553600 Returning 0 notifications for user 1
+INFO 2025-07-02 08:19:29,912 views 55525 139831753553600 Notification data: []
+INFO 2025-07-02 08:19:29,943 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.22, 127.0.0.1:45164][0m
+INFO 2025-07-02 08:19:29,943 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.22, 127.0.0.1:45164][0m
+INFO 2025-07-02 08:19:29,945 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.33, 127.0.0.1:45148][0m
+INFO 2025-07-02 08:19:29,945 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.33, 127.0.0.1:45148][0m
+WARNING 2025-07-02 08:19:31,565 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.16, 127.0.0.1:45164][0m
+WARNING 2025-07-02 08:19:31,565 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.16, 127.0.0.1:45164][0m
+INFO 2025-07-02 08:19:31,802 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.32, 127.0.0.1:45194][0m
+INFO 2025-07-02 08:19:31,802 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.32, 127.0.0.1:45194][0m
+INFO 2025-07-02 08:19:31,867 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.38, 127.0.0.1:45192][0m
+INFO 2025-07-02 08:19:31,867 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.38, 127.0.0.1:45192][0m
+INFO 2025-07-02 08:19:31,869 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.38, 127.0.0.1:45214][0m
+INFO 2025-07-02 08:19:31,869 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.38, 127.0.0.1:45214][0m
+INFO 2025-07-02 08:19:32,016 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.54, 127.0.0.1:45176][0m
+INFO 2025-07-02 08:19:32,016 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.54, 127.0.0.1:45176][0m
+INFO 2025-07-02 08:19:32,139 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.65, 127.0.0.1:45210][0m
+INFO 2025-07-02 08:19:32,139 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.65, 127.0.0.1:45210][0m
+INFO 2025-07-02 08:19:32,225 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.39, 127.0.0.1:45218][0m
+INFO 2025-07-02 08:19:32,225 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.39, 127.0.0.1:45218][0m
+INFO 2025-07-02 08:19:32,230 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.32, 127.0.0.1:45194][0m
+INFO 2025-07-02 08:19:32,230 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.32, 127.0.0.1:45194][0m
+INFO 2025-07-02 08:19:32,285 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.36, 127.0.0.1:45214][0m
+INFO 2025-07-02 08:19:32,285 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.36, 127.0.0.1:45214][0m
+INFO 2025-07-02 08:19:32,326 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.42, 127.0.0.1:45192][0m
+INFO 2025-07-02 08:19:32,326 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.42, 127.0.0.1:45192][0m
+INFO 2025-07-02 08:19:32,458 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.40, 127.0.0.1:45176][0m
+INFO 2025-07-02 08:19:32,458 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.40, 127.0.0.1:45176][0m
+INFO 2025-07-02 08:19:32,479 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.30, 127.0.0.1:45210][0m
+INFO 2025-07-02 08:19:32,479 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.30, 127.0.0.1:45210][0m
+INFO 2025-07-02 08:19:32,530 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.21, 127.0.0.1:45218][0m
+INFO 2025-07-02 08:19:32,530 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.21, 127.0.0.1:45218][0m
+INFO 2025-07-02 08:19:32,542 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.22, 127.0.0.1:45194][0m
+INFO 2025-07-02 08:19:32,542 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.22, 127.0.0.1:45194][0m
+INFO 2025-07-02 08:19:32,558 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45124]
+INFO 2025-07-02 08:19:32,558 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45124]
+INFO 2025-07-02 08:19:32,560 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:45138]
+INFO 2025-07-02 08:19:32,560 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:45138]
+INFO 2025-07-02 08:19:32,561 consumers 55525 139832540001984 [92m=== WebSocket Disconnection ===[0m
+INFO 2025-07-02 08:19:32,563 consumers 55525 139832540001984 [92mClose code: 1000[0m
+INFO 2025-07-02 08:19:32,564 consumers 55525 139832540001984 [92mChannel name: specific.4c49f78592d1431fb105e2d0a20587a7!225b8275b9ce4357b66a0c73035e3fd8[0m
+INFO 2025-07-02 08:19:32,566 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:19:32,568 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:19:32,575 consumers 55525 139832540001984 [92mRemoved from global chat group[0m
+INFO 2025-07-02 08:19:32,638 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.09, 127.0.0.1:45210][0m
+INFO 2025-07-02 08:19:32,638 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.09, 127.0.0.1:45210][0m
+INFO 2025-07-02 08:21:00,445 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:41384]
+INFO 2025-07-02 08:21:00,445 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:41384]
+INFO 2025-07-02 08:21:00,446 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:21:00,453 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:21:00,455 consumers 55525 139832540001984 [92m=== Global Chat WebSocket Connection Attempt ===[0m
+INFO 2025-07-02 08:21:00,455 consumers 55525 139832540001984 [92mQuery string: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNDQ1OTE3LCJpYXQiOjE3NTE0NDIzMTcsImp0aSI6IjE1MDc2NGUyZmNkOTRhNmJiMDUyY2M0ZWE3MWNiMDljIiwidXNlcl9pZCI6MX0.m6ly61Zk0ot35p7PCIAhi4ub0HaVaaNvX94VYoQ_Qh8[0m
+INFO 2025-07-02 08:21:00,493 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:41384]
+INFO 2025-07-02 08:21:00,493 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:41384]
+INFO 2025-07-02 08:21:00,494 consumers 55525 139832540001984 [92mWebSocket connection accepted for user horugavye[0m
+INFO 2025-07-02 08:21:00,495 consumers 55525 139832540001984 [92mAdded to global chat group: chat_global[0m
+INFO 2025-07-02 08:21:00,513 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:41394]
+INFO 2025-07-02 08:21:00,513 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:41394]
+INFO 2025-07-02 08:21:00,514 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:21:00,528 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:21:00,580 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:41394]
+INFO 2025-07-02 08:21:00,580 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:41394]
+INFO 2025-07-02 08:21:00,598 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.08, 127.0.0.1:41402][0m
+INFO 2025-07-02 08:21:00,598 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.08, 127.0.0.1:41402][0m
+INFO 2025-07-02 08:21:00,645 views 55525 139832156206784 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:21:00,648 views 55525 139832156206784 Returning 0 notifications for user 1
+INFO 2025-07-02 08:21:00,648 views 55525 139832156206784 Notification data: []
+INFO 2025-07-02 08:21:00,656 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.05, 127.0.0.1:41418][0m
+INFO 2025-07-02 08:21:00,656 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.05, 127.0.0.1:41418][0m
+INFO 2025-07-02 08:21:01,290 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:41384]
+INFO 2025-07-02 08:21:01,290 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:41384]
+INFO 2025-07-02 08:21:01,291 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:41394]
+INFO 2025-07-02 08:21:01,291 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:41394]
+INFO 2025-07-02 08:21:01,292 consumers 55525 139832540001984 [92m=== WebSocket Disconnection ===[0m
+INFO 2025-07-02 08:21:01,292 consumers 55525 139832540001984 [92mClose code: 1000[0m
+INFO 2025-07-02 08:21:01,292 consumers 55525 139832540001984 [92mChannel name: specific.4c49f78592d1431fb105e2d0a20587a7!95cc1daf25c242e6984f598e0203ab82[0m
+INFO 2025-07-02 08:21:01,293 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:21:01,293 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:21:01,295 consumers 55525 139832540001984 [92mRemoved from global chat group[0m
+INFO 2025-07-02 08:24:39,483 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.11, 127.0.0.1:53874][0m
+INFO 2025-07-02 08:24:39,483 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.11, 127.0.0.1:53874][0m
+WARNING 2025-07-02 08:24:39,754 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.23, 127.0.0.1:53868][0m
+WARNING 2025-07-02 08:24:39,754 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.23, 127.0.0.1:53868][0m
+INFO 2025-07-02 08:25:28,375 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.01, 127.0.0.1:53874][0m
+INFO 2025-07-02 08:25:28,375 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.01, 127.0.0.1:53874][0m
+WARNING 2025-07-02 08:25:28,471 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.08, 127.0.0.1:57532][0m
+WARNING 2025-07-02 08:25:28,471 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.08, 127.0.0.1:57532][0m
+WARNING 2025-07-02 08:25:32,358 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.07, 127.0.0.1:57536][0m
+WARNING 2025-07-02 08:25:32,358 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.07, 127.0.0.1:57536][0m
+INFO 2025-07-02 08:25:44,671 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.01, 127.0.0.1:53874][0m
+INFO 2025-07-02 08:25:44,671 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.01, 127.0.0.1:53874][0m
+WARNING 2025-07-02 08:25:44,750 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.07, 127.0.0.1:49552][0m
+WARNING 2025-07-02 08:25:44,750 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.07, 127.0.0.1:49552][0m
+WARNING 2025-07-02 08:25:49,469 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.06, 127.0.0.1:49566][0m
+WARNING 2025-07-02 08:25:49,469 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.06, 127.0.0.1:49566][0m
+INFO 2025-07-02 08:26:05,699 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.01, 127.0.0.1:53874][0m
+INFO 2025-07-02 08:26:05,699 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.01, 127.0.0.1:53874][0m
+WARNING 2025-07-02 08:26:05,804 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.09, 127.0.0.1:33446][0m
+WARNING 2025-07-02 08:26:05,804 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.09, 127.0.0.1:33446][0m
+WARNING 2025-07-02 08:26:08,617 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.01, 127.0.0.1:33448][0m
+WARNING 2025-07-02 08:26:08,617 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.01, 127.0.0.1:33448][0m
+INFO 2025-07-02 08:30:46,902 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:45324][0m
+INFO 2025-07-02 08:30:46,902 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:45324][0m
+WARNING 2025-07-02 08:30:46,932 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.02, 127.0.0.1:45314][0m
+WARNING 2025-07-02 08:30:46,932 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.02, 127.0.0.1:45314][0m
+INFO 2025-07-02 08:31:25,604 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:45324][0m
+INFO 2025-07-02 08:31:25,604 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:45324][0m
+WARNING 2025-07-02 08:31:25,695 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.08, 127.0.0.1:34646][0m
+WARNING 2025-07-02 08:31:25,695 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.08, 127.0.0.1:34646][0m
+WARNING 2025-07-02 08:31:29,087 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.03, 127.0.0.1:34650][0m
+WARNING 2025-07-02 08:31:29,087 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.03, 127.0.0.1:34650][0m
+INFO 2025-07-02 08:32:34,296 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:41510][0m
+INFO 2025-07-02 08:32:34,296 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:41510][0m
+WARNING 2025-07-02 08:32:34,340 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.04, 127.0.0.1:41504][0m
+WARNING 2025-07-02 08:32:34,340 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.04, 127.0.0.1:41504][0m
+WARNING 2025-07-02 08:32:40,201 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.03, 127.0.0.1:47806][0m
+WARNING 2025-07-02 08:32:40,201 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.03, 127.0.0.1:47806][0m
+INFO 2025-07-02 08:32:43,491 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:41510][0m
+INFO 2025-07-02 08:32:43,491 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/default.jpeg 200 [0.00, 127.0.0.1:41510][0m
+WARNING 2025-07-02 08:32:43,558 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.04, 127.0.0.1:47810][0m
+WARNING 2025-07-02 08:32:43,558 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/default.jpeg 404 [0.04, 127.0.0.1:47810][0m
+INFO 2025-07-02 08:32:49,715 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 200 [0.01, 127.0.0.1:41510][0m
+INFO 2025-07-02 08:32:49,715 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 200 [0.01, 127.0.0.1:41510][0m
+WARNING 2025-07-02 08:32:49,768 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.02, 127.0.0.1:38274][0m
+WARNING 2025-07-02 08:32:49,768 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.02, 127.0.0.1:38274][0m
+INFO 2025-07-02 08:32:50,153 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 200 [0.01, 127.0.0.1:41510][0m
+INFO 2025-07-02 08:32:50,153 runserver 55525 139832540001984 [mHTTP OPTIONS /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 200 [0.01, 127.0.0.1:41510][0m
+WARNING 2025-07-02 08:32:50,210 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.05, 127.0.0.1:38282][0m
+WARNING 2025-07-02 08:32:50,210 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.05, 127.0.0.1:38282][0m
+INFO 2025-07-02 08:33:29,863 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:49642]
+INFO 2025-07-02 08:33:29,863 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:49642]
+INFO 2025-07-02 08:33:29,865 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:33:29,967 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:33:29,972 consumers 55525 139832540001984 [92m=== Global Chat WebSocket Connection Attempt ===[0m
+INFO 2025-07-02 08:33:29,972 consumers 55525 139832540001984 [92mQuery string: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNDQ1OTE3LCJpYXQiOjE3NTE0NDIzMTcsImp0aSI6IjE1MDc2NGUyZmNkOTRhNmJiMDUyY2M0ZWE3MWNiMDljIiwidXNlcl9pZCI6MX0.m6ly61Zk0ot35p7PCIAhi4ub0HaVaaNvX94VYoQ_Qh8[0m
+INFO 2025-07-02 08:33:30,177 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:49642]
+INFO 2025-07-02 08:33:30,177 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:49642]
+INFO 2025-07-02 08:33:30,180 consumers 55525 139832540001984 [92mWebSocket connection accepted for user horugavye[0m
+INFO 2025-07-02 08:33:30,196 consumers 55525 139832540001984 [92mAdded to global chat group: chat_global[0m
+INFO 2025-07-02 08:33:30,208 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:49658]
+INFO 2025-07-02 08:33:30,208 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:49658]
+INFO 2025-07-02 08:33:30,211 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:33:30,235 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:33:30,310 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:49658]
+INFO 2025-07-02 08:33:30,310 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:49658]
+INFO 2025-07-02 08:33:30,520 views 55525 139832139421376 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:33:30,533 views 55525 139832139421376 Returning 0 notifications for user 1
+INFO 2025-07-02 08:33:30,537 views 55525 139832139421376 Notification data: []
+INFO 2025-07-02 08:33:30,579 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.22, 127.0.0.1:49672][0m
+INFO 2025-07-02 08:33:30,579 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.22, 127.0.0.1:49672][0m
+INFO 2025-07-02 08:33:30,596 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.18, 127.0.0.1:49684][0m
+INFO 2025-07-02 08:33:30,596 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.18, 127.0.0.1:49684][0m
+INFO 2025-07-02 08:33:31,015 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:49642]
+INFO 2025-07-02 08:33:31,015 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:49642]
+INFO 2025-07-02 08:33:31,022 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:49658]
+INFO 2025-07-02 08:33:31,022 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:49658]
+INFO 2025-07-02 08:33:31,024 consumers 55525 139832540001984 [92m=== WebSocket Disconnection ===[0m
+INFO 2025-07-02 08:33:31,026 consumers 55525 139832540001984 [92mClose code: 1000[0m
+INFO 2025-07-02 08:33:31,028 consumers 55525 139832540001984 [92mChannel name: specific.4c49f78592d1431fb105e2d0a20587a7!38da9074ce1149a9adbb57c979bb3642[0m
+INFO 2025-07-02 08:33:31,032 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:33:31,034 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:33:31,040 consumers 55525 139832540001984 [92mRemoved from global chat group[0m
+INFO 2025-07-02 08:33:53,805 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:44798]
+INFO 2025-07-02 08:33:53,805 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:44798]
+INFO 2025-07-02 08:33:53,806 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:33:53,812 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:33:53,812 consumers 55525 139832540001984 [92m=== Global Chat WebSocket Connection Attempt ===[0m
+INFO 2025-07-02 08:33:53,813 consumers 55525 139832540001984 [92mQuery string: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNDQ1OTE3LCJpYXQiOjE3NTE0NDIzMTcsImp0aSI6IjE1MDc2NGUyZmNkOTRhNmJiMDUyY2M0ZWE3MWNiMDljIiwidXNlcl9pZCI6MX0.m6ly61Zk0ot35p7PCIAhi4ub0HaVaaNvX94VYoQ_Qh8[0m
+INFO 2025-07-02 08:33:53,840 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:44798]
+INFO 2025-07-02 08:33:53,840 runserver 55525 139832540001984 WebSocket CONNECT /ws/chat/global/ [127.0.0.1:44798]
+INFO 2025-07-02 08:33:53,840 consumers 55525 139832540001984 [92mWebSocket connection accepted for user horugavye[0m
+INFO 2025-07-02 08:33:53,842 consumers 55525 139832540001984 [92mAdded to global chat group: chat_global[0m
+INFO 2025-07-02 08:33:53,858 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:44802]
+INFO 2025-07-02 08:33:53,858 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:44802]
+INFO 2025-07-02 08:33:53,859 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:33:53,869 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:33:53,914 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:44802]
+INFO 2025-07-02 08:33:53,914 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:44802]
+INFO 2025-07-02 08:33:53,969 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.10, 127.0.0.1:49672][0m
+INFO 2025-07-02 08:33:53,969 runserver 55525 139832540001984 [mHTTP GET /api/chat/conversations/ 200 [0.10, 127.0.0.1:49672][0m
+INFO 2025-07-02 08:33:54,002 views 55525 139832156206784 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:33:54,008 views 55525 139832156206784 Returning 0 notifications for user 1
+INFO 2025-07-02 08:33:54,008 views 55525 139832156206784 Notification data: []
+INFO 2025-07-02 08:33:54,016 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.07, 127.0.0.1:49684][0m
+INFO 2025-07-02 08:33:54,016 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.07, 127.0.0.1:49684][0m
+INFO 2025-07-02 08:33:57,985 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:44798]
+INFO 2025-07-02 08:33:57,985 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:44798]
+INFO 2025-07-02 08:33:57,987 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:44802]
+INFO 2025-07-02 08:33:57,987 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:44802]
+INFO 2025-07-02 08:33:57,990 consumers 55525 139832540001984 [92m=== WebSocket Disconnection ===[0m
+INFO 2025-07-02 08:33:57,990 consumers 55525 139832540001984 [92mClose code: 1000[0m
+INFO 2025-07-02 08:33:57,991 consumers 55525 139832540001984 [92mChannel name: specific.4c49f78592d1431fb105e2d0a20587a7!77e1325dae5040b49394fb184f04bf69[0m
+INFO 2025-07-02 08:33:57,992 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:33:57,993 consumers 55525 139832540001984 [92mHeartbeat task cancelled[0m
+INFO 2025-07-02 08:33:58,004 consumers 55525 139832540001984 [92mRemoved from global chat group[0m
+INFO 2025-07-02 08:49:04,680 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50370]
+INFO 2025-07-02 08:49:04,680 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50370]
+INFO 2025-07-02 08:49:04,698 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:49:04,743 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:49:04,752 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:49:04,769 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50370]
+INFO 2025-07-02 08:49:04,769 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50370]
+INFO 2025-07-02 08:49:04,777 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50370]
+INFO 2025-07-02 08:49:04,777 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50370]
+INFO 2025-07-02 08:49:04,793 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50384]
+INFO 2025-07-02 08:49:04,793 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50384]
+INFO 2025-07-02 08:49:04,794 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:49:04,937 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:49:05,200 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50384]
+INFO 2025-07-02 08:49:05,200 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50384]
+INFO 2025-07-02 08:49:05,438 views 55525 139832156206784 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:49:05,449 views 55525 139832156206784 Returning 0 notifications for user 1
+INFO 2025-07-02 08:49:05,450 views 55525 139832156206784 Notification data: []
+INFO 2025-07-02 08:49:05,520 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.25, 127.0.0.1:50394][0m
+INFO 2025-07-02 08:49:05,520 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.25, 127.0.0.1:50394][0m
+INFO 2025-07-02 08:49:07,800 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50408]
+INFO 2025-07-02 08:49:07,800 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50408]
+INFO 2025-07-02 08:49:07,802 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:49:07,805 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:49:07,807 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:49:07,809 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50408]
+INFO 2025-07-02 08:49:07,809 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50408]
+INFO 2025-07-02 08:49:07,811 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50408]
+INFO 2025-07-02 08:49:07,811 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50408]
+WARNING 2025-07-02 08:49:09,974 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.18, 127.0.0.1:50394][0m
+WARNING 2025-07-02 08:49:09,974 runserver 55525 139832540001984 [33mHTTP GET /media/avatars/profile-default-icon-2048x2045-u3j7s5nj.png 404 [0.18, 127.0.0.1:50394][0m
+INFO 2025-07-02 08:49:10,233 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.39, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:10,233 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.39, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:10,246 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.42, 127.0.0.1:50428][0m
+INFO 2025-07-02 08:49:10,246 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.42, 127.0.0.1:50428][0m
+INFO 2025-07-02 08:49:10,266 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.44, 127.0.0.1:50422][0m
+INFO 2025-07-02 08:49:10,266 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.44, 127.0.0.1:50422][0m
+INFO 2025-07-02 08:49:10,315 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.49, 127.0.0.1:50418][0m
+INFO 2025-07-02 08:49:10,315 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.49, 127.0.0.1:50418][0m
+INFO 2025-07-02 08:49:10,387 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.56, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:10,387 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.56, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:10,479 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.21, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:10,479 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.21, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:10,598 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.30, 127.0.0.1:50428][0m
+INFO 2025-07-02 08:49:10,598 runserver 55525 139832540001984 [mHTTP GET /api/connections/connections/friends/ 200 [0.30, 127.0.0.1:50428][0m
+INFO 2025-07-02 08:49:10,599 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.35, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:10,599 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=community 200 [0.35, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:10,675 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.35, 127.0.0.1:50422][0m
+INFO 2025-07-02 08:49:10,675 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.35, 127.0.0.1:50422][0m
+INFO 2025-07-02 08:49:10,711 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.38, 127.0.0.1:50418][0m
+INFO 2025-07-02 08:49:10,711 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.38, 127.0.0.1:50418][0m
+INFO 2025-07-02 08:49:10,766 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.35, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:10,766 runserver 55525 139832540001984 [mHTTP GET /api/communities/posts/feed/?type=personal 200 [0.35, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:10,777 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.25, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:10,777 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.25, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:10,834 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50472]
+INFO 2025-07-02 08:49:10,834 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50472]
+INFO 2025-07-02 08:49:10,858 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:49:10,870 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:49:10,875 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:49:10,876 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50472]
+INFO 2025-07-02 08:49:10,876 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50472]
+INFO 2025-07-02 08:49:10,878 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50472]
+INFO 2025-07-02 08:49:10,878 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50472]
+INFO 2025-07-02 08:49:10,894 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.18, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:10,894 runserver 55525 139832540001984 [mHTTP GET /api/stories/stories/ 200 [0.18, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:10,926 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.14, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:10,926 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.14, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:13,888 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50488]
+INFO 2025-07-02 08:49:13,888 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50488]
+INFO 2025-07-02 08:49:13,889 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:49:13,890 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:49:13,890 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:49:13,890 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50488]
+INFO 2025-07-02 08:49:13,890 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50488]
+INFO 2025-07-02 08:49:13,891 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50488]
+INFO 2025-07-02 08:49:13,891 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50488]
+INFO 2025-07-02 08:49:16,907 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45384]
+INFO 2025-07-02 08:49:16,907 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45384]
+INFO 2025-07-02 08:49:16,908 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:49:16,910 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:49:16,912 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:49:16,913 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45384]
+INFO 2025-07-02 08:49:16,913 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45384]
+INFO 2025-07-02 08:49:16,914 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45384]
+INFO 2025-07-02 08:49:16,914 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45384]
+INFO 2025-07-02 08:49:17,604 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.09, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:17,604 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.09, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:17,685 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.17, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:17,685 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.17, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:17,753 runserver 55525 139832540001984 [mHTTP GET /api/research/people/?search=d 200 [0.24, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:17,753 runserver 55525 139832540001984 [mHTTP GET /api/research/people/?search=d 200 [0.24, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:17,758 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.13, 127.0.0.1:50418][0m
+INFO 2025-07-02 08:49:17,758 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.13, 127.0.0.1:50418][0m
+INFO 2025-07-02 08:49:17,921 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.22, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:17,921 runserver 55525 139832540001984 [mHTTP GET /api/communities/user/ 200 [0.22, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:17,990 runserver 55525 139832540001984 [mHTTP GET /api/communities/?search=d 200 [0.20, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:17,990 runserver 55525 139832540001984 [mHTTP GET /api/communities/?search=d 200 [0.20, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:18,048 runserver 55525 139832540001984 [mHTTP GET /api/research/people/?search=d 200 [0.29, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:18,048 runserver 55525 139832540001984 [mHTTP GET /api/research/people/?search=d 200 [0.29, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:18,118 runserver 55525 139832540001984 [36mHTTP GET /media/community_banners/download.jpeg 304 [0.08, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:18,118 runserver 55525 139832540001984 [36mHTTP GET /media/community_banners/download.jpeg 304 [0.08, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:18,221 runserver 55525 139832540001984 [mHTTP GET /api/communities/?search=d 200 [0.15, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:18,221 runserver 55525 139832540001984 [mHTTP GET /api/communities/?search=d 200 [0.15, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:18,255 runserver 55525 139832540001984 [mHTTP GET /api/posts/?search=d 200 [0.24, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:18,255 runserver 55525 139832540001984 [mHTTP GET /api/posts/?search=d 200 [0.24, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:18,422 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.10, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:18,422 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.10, 127.0.0.1:50440][0m
+INFO 2025-07-02 08:49:18,450 runserver 55525 139832540001984 [mHTTP GET /api/posts/?search=d 200 [0.19, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:18,450 runserver 55525 139832540001984 [mHTTP GET /api/posts/?search=d 200 [0.19, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:18,494 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.06, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:18,494 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.06, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:19,932 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45398]
+INFO 2025-07-02 08:49:19,932 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45398]
+INFO 2025-07-02 08:49:19,941 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:49:19,945 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:49:19,951 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:49:19,952 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45398]
+INFO 2025-07-02 08:49:19,952 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45398]
+INFO 2025-07-02 08:49:19,956 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45398]
+INFO 2025-07-02 08:49:19,956 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45398]
+INFO 2025-07-02 08:49:21,939 runserver 55525 139832540001984 [36mHTTP GET /media/avatars/download.jpeg 304 [0.02, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:21,939 runserver 55525 139832540001984 [36mHTTP GET /media/avatars/download.jpeg 304 [0.02, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:22,026 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.11, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:22,026 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.11, 127.0.0.1:50450][0m
+INFO 2025-07-02 08:49:22,159 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.13, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:22,159 runserver 55525 139832540001984 [mHTTP GET /api/saved-posts/ 200 [0.13, 127.0.0.1:50460][0m
+INFO 2025-07-02 08:49:26,045 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50384]
+INFO 2025-07-02 08:49:26,045 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50384]
+INFO 2025-07-02 08:50:49,705 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58816]
+INFO 2025-07-02 08:50:49,705 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58816]
+INFO 2025-07-02 08:50:49,727 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:50:49,768 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:50:49,778 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:50:49,793 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58816]
+INFO 2025-07-02 08:50:49,793 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58816]
+INFO 2025-07-02 08:50:49,799 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58816]
+INFO 2025-07-02 08:50:49,799 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58816]
+INFO 2025-07-02 08:50:49,831 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:58826]
+INFO 2025-07-02 08:50:49,831 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:58826]
+INFO 2025-07-02 08:50:49,840 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:50:50,104 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:50:50,405 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:58826]
+INFO 2025-07-02 08:50:50,405 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:58826]
+INFO 2025-07-02 08:50:50,982 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:50:51,002 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:50:51,004 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:50:51,112 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.58, 127.0.0.1:58832][0m
+INFO 2025-07-02 08:50:51,112 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.58, 127.0.0.1:58832][0m
+INFO 2025-07-02 08:50:52,823 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58840]
+INFO 2025-07-02 08:50:52,823 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58840]
+INFO 2025-07-02 08:50:52,824 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:50:52,825 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:50:52,826 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:50:52,827 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58840]
+INFO 2025-07-02 08:50:52,827 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58840]
+INFO 2025-07-02 08:50:52,829 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58840]
+INFO 2025-07-02 08:50:52,829 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58840]
+INFO 2025-07-02 08:50:52,963 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:58826]
+INFO 2025-07-02 08:50:52,963 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:58826]
+INFO 2025-07-02 08:50:56,628 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58858]
+INFO 2025-07-02 08:50:56,628 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58858]
+INFO 2025-07-02 08:50:56,633 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:50:56,634 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:50:56,637 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:50:56,638 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58858]
+INFO 2025-07-02 08:50:56,638 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58858]
+INFO 2025-07-02 08:50:56,640 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58858]
+INFO 2025-07-02 08:50:56,640 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58858]
+INFO 2025-07-02 08:51:00,600 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58862]
+INFO 2025-07-02 08:51:00,600 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58862]
+INFO 2025-07-02 08:51:00,601 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:51:00,602 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:51:00,603 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:51:00,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58862]
+INFO 2025-07-02 08:51:00,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58862]
+INFO 2025-07-02 08:51:00,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58862]
+INFO 2025-07-02 08:51:00,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58862]
+INFO 2025-07-02 08:51:04,607 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57138]
+INFO 2025-07-02 08:51:04,607 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57138]
+INFO 2025-07-02 08:51:04,608 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:51:04,611 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:51:04,612 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:51:04,613 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57138]
+INFO 2025-07-02 08:51:04,613 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57138]
+INFO 2025-07-02 08:51:04,614 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57138]
+INFO 2025-07-02 08:51:04,614 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57138]
+INFO 2025-07-02 08:51:08,602 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57152]
+INFO 2025-07-02 08:51:08,602 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57152]
+INFO 2025-07-02 08:51:08,603 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:51:08,603 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:51:08,604 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:51:08,605 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57152]
+INFO 2025-07-02 08:51:08,605 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57152]
+INFO 2025-07-02 08:51:08,605 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57152]
+INFO 2025-07-02 08:51:08,605 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57152]
+INFO 2025-07-02 08:52:51,955 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:34868]
+INFO 2025-07-02 08:52:51,955 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:34868]
+INFO 2025-07-02 08:52:51,957 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:52:51,959 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:52:51,960 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:52:51,960 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:34868]
+INFO 2025-07-02 08:52:51,960 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:34868]
+INFO 2025-07-02 08:52:51,961 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:34868]
+INFO 2025-07-02 08:52:51,961 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:34868]
+INFO 2025-07-02 08:52:51,983 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:34880]
+INFO 2025-07-02 08:52:51,983 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:34880]
+INFO 2025-07-02 08:52:51,987 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:52:52,015 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:52:52,140 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:34880]
+INFO 2025-07-02 08:52:52,140 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:34880]
+INFO 2025-07-02 08:52:52,370 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:52:52,375 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:52:52,376 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:52:52,419 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.22, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:52:52,419 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.22, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:52:54,299 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:34880]
+INFO 2025-07-02 08:52:54,299 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:34880]
+INFO 2025-07-02 08:52:55,607 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45412]
+INFO 2025-07-02 08:52:55,607 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45412]
+INFO 2025-07-02 08:52:55,609 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:52:55,612 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:52:55,613 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:52:55,615 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45412]
+INFO 2025-07-02 08:52:55,615 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45412]
+INFO 2025-07-02 08:52:55,616 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45412]
+INFO 2025-07-02 08:52:55,616 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45412]
+INFO 2025-07-02 08:52:59,606 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45420]
+INFO 2025-07-02 08:52:59,606 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45420]
+INFO 2025-07-02 08:52:59,607 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:52:59,609 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:52:59,610 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:52:59,612 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45420]
+INFO 2025-07-02 08:52:59,612 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45420]
+INFO 2025-07-02 08:52:59,613 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45420]
+INFO 2025-07-02 08:52:59,613 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45420]
+INFO 2025-07-02 08:53:03,595 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45436]
+INFO 2025-07-02 08:53:03,595 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45436]
+INFO 2025-07-02 08:53:03,596 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:03,597 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:03,598 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:03,598 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45436]
+INFO 2025-07-02 08:53:03,598 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45436]
+INFO 2025-07-02 08:53:03,599 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45436]
+INFO 2025-07-02 08:53:03,599 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45436]
+INFO 2025-07-02 08:53:07,605 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:43094]
+INFO 2025-07-02 08:53:07,605 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:43094]
+INFO 2025-07-02 08:53:07,607 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:07,609 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:07,611 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:07,612 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:43094]
+INFO 2025-07-02 08:53:07,612 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:43094]
+INFO 2025-07-02 08:53:07,615 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:43094]
+INFO 2025-07-02 08:53:07,615 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:43094]
+INFO 2025-07-02 08:53:11,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:43098]
+INFO 2025-07-02 08:53:11,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:43098]
+INFO 2025-07-02 08:53:11,606 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:11,607 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:11,608 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:11,609 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:43098]
+INFO 2025-07-02 08:53:11,609 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:43098]
+INFO 2025-07-02 08:53:11,611 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:43098]
+INFO 2025-07-02 08:53:11,611 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:43098]
+INFO 2025-07-02 08:53:19,672 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58164]
+INFO 2025-07-02 08:53:19,672 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58164]
+INFO 2025-07-02 08:53:19,672 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:19,677 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:19,677 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:19,678 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58164]
+INFO 2025-07-02 08:53:19,678 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58164]
+INFO 2025-07-02 08:53:19,679 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58164]
+INFO 2025-07-02 08:53:19,679 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58164]
+INFO 2025-07-02 08:53:19,695 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:58172]
+INFO 2025-07-02 08:53:19,695 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:58172]
+INFO 2025-07-02 08:53:19,696 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:53:19,703 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:53:19,741 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:58172]
+INFO 2025-07-02 08:53:19,741 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:58172]
+INFO 2025-07-02 08:53:19,840 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:53:19,846 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:53:19,847 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:53:19,859 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:53:19,859 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:53:22,278 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:58172]
+INFO 2025-07-02 08:53:22,278 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:58172]
+INFO 2025-07-02 08:53:23,598 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58186]
+INFO 2025-07-02 08:53:23,598 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:58186]
+INFO 2025-07-02 08:53:23,599 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:23,600 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:23,601 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:23,602 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58186]
+INFO 2025-07-02 08:53:23,602 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:58186]
+INFO 2025-07-02 08:53:23,603 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58186]
+INFO 2025-07-02 08:53:23,603 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:58186]
+INFO 2025-07-02 08:53:24,054 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:58196]
+INFO 2025-07-02 08:53:24,054 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:58196]
+INFO 2025-07-02 08:53:24,055 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:53:24,059 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:53:24,098 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:58196]
+INFO 2025-07-02 08:53:24,098 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:58196]
+INFO 2025-07-02 08:53:24,191 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:53:24,196 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:53:24,197 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:53:24,209 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:53:24,209 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:53:26,613 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45568]
+INFO 2025-07-02 08:53:26,613 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45568]
+INFO 2025-07-02 08:53:26,613 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:26,614 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:26,614 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:26,615 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45568]
+INFO 2025-07-02 08:53:26,615 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45568]
+INFO 2025-07-02 08:53:26,615 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45568]
+INFO 2025-07-02 08:53:26,615 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45568]
+INFO 2025-07-02 08:53:27,846 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:58196]
+INFO 2025-07-02 08:53:27,846 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:58196]
+INFO 2025-07-02 08:53:30,613 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45582]
+INFO 2025-07-02 08:53:30,613 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:45582]
+INFO 2025-07-02 08:53:30,616 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:30,618 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:30,619 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:30,620 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45582]
+INFO 2025-07-02 08:53:30,620 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:45582]
+INFO 2025-07-02 08:53:30,623 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45582]
+INFO 2025-07-02 08:53:30,623 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:45582]
+INFO 2025-07-02 08:53:34,606 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57854]
+INFO 2025-07-02 08:53:34,606 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57854]
+INFO 2025-07-02 08:53:34,608 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:34,610 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:34,612 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:34,614 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57854]
+INFO 2025-07-02 08:53:34,614 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57854]
+INFO 2025-07-02 08:53:34,618 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57854]
+INFO 2025-07-02 08:53:34,618 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57854]
+INFO 2025-07-02 08:53:38,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57858]
+INFO 2025-07-02 08:53:38,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57858]
+INFO 2025-07-02 08:53:38,605 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:38,607 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:38,609 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:38,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57858]
+INFO 2025-07-02 08:53:38,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57858]
+INFO 2025-07-02 08:53:38,612 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57858]
+INFO 2025-07-02 08:53:38,612 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57858]
+INFO 2025-07-02 08:53:42,603 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57874]
+INFO 2025-07-02 08:53:42,603 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57874]
+INFO 2025-07-02 08:53:42,605 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:42,607 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:42,608 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:42,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57874]
+INFO 2025-07-02 08:53:42,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57874]
+INFO 2025-07-02 08:53:42,611 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57874]
+INFO 2025-07-02 08:53:42,611 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57874]
+INFO 2025-07-02 08:53:45,645 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57946]
+INFO 2025-07-02 08:53:45,645 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57946]
+INFO 2025-07-02 08:53:45,647 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:45,649 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:45,653 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:45,654 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57946]
+INFO 2025-07-02 08:53:45,654 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57946]
+INFO 2025-07-02 08:53:45,656 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57946]
+INFO 2025-07-02 08:53:45,656 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57946]
+INFO 2025-07-02 08:53:45,672 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:57958]
+INFO 2025-07-02 08:53:45,672 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:57958]
+INFO 2025-07-02 08:53:45,673 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:53:45,684 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:53:45,722 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:57958]
+INFO 2025-07-02 08:53:45,722 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:57958]
+INFO 2025-07-02 08:53:45,812 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:53:45,815 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:53:45,815 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:53:45,827 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:53:45,827 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:34896][0m
+INFO 2025-07-02 08:53:48,667 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57962]
+INFO 2025-07-02 08:53:48,667 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57962]
+INFO 2025-07-02 08:53:48,668 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:48,669 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:48,669 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:48,670 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57962]
+INFO 2025-07-02 08:53:48,670 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57962]
+INFO 2025-07-02 08:53:48,673 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57962]
+INFO 2025-07-02 08:53:48,673 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57962]
+INFO 2025-07-02 08:53:49,671 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:57958]
+INFO 2025-07-02 08:53:49,671 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:57958]
+INFO 2025-07-02 08:53:52,603 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57978]
+INFO 2025-07-02 08:53:52,603 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57978]
+INFO 2025-07-02 08:53:52,604 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:52,606 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:52,607 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:52,608 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57978]
+INFO 2025-07-02 08:53:52,608 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57978]
+INFO 2025-07-02 08:53:52,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57978]
+INFO 2025-07-02 08:53:52,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57978]
+INFO 2025-07-02 08:53:56,625 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50730]
+INFO 2025-07-02 08:53:56,625 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50730]
+INFO 2025-07-02 08:53:56,627 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:53:56,633 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:53:56,637 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:53:56,640 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50730]
+INFO 2025-07-02 08:53:56,640 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50730]
+INFO 2025-07-02 08:53:56,644 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50730]
+INFO 2025-07-02 08:53:56,644 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50730]
+INFO 2025-07-02 08:54:00,602 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50740]
+INFO 2025-07-02 08:54:00,602 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50740]
+INFO 2025-07-02 08:54:00,603 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:54:00,605 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:54:00,606 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:54:00,608 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50740]
+INFO 2025-07-02 08:54:00,608 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50740]
+INFO 2025-07-02 08:54:00,611 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50740]
+INFO 2025-07-02 08:54:00,611 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50740]
+INFO 2025-07-02 08:54:04,600 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57508]
+INFO 2025-07-02 08:54:04,600 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57508]
+INFO 2025-07-02 08:54:04,601 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:54:04,602 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:54:04,603 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:54:04,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57508]
+INFO 2025-07-02 08:54:04,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57508]
+INFO 2025-07-02 08:54:04,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57508]
+INFO 2025-07-02 08:54:04,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57508]
+INFO 2025-07-02 08:54:58,868 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50518]
+INFO 2025-07-02 08:54:58,868 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50518]
+INFO 2025-07-02 08:54:58,868 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:54:58,869 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:54:58,870 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:54:58,870 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50518]
+INFO 2025-07-02 08:54:58,870 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50518]
+INFO 2025-07-02 08:54:58,871 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50518]
+INFO 2025-07-02 08:54:58,871 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50518]
+INFO 2025-07-02 08:54:58,884 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50526]
+INFO 2025-07-02 08:54:58,884 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50526]
+INFO 2025-07-02 08:54:58,885 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:54:58,890 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:54:58,928 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50526]
+INFO 2025-07-02 08:54:58,928 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50526]
+INFO 2025-07-02 08:54:59,053 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:54:59,057 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:54:59,058 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:54:59,069 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.06, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:54:59,069 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.06, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:55:00,736 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50526]
+INFO 2025-07-02 08:55:00,736 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50526]
+INFO 2025-07-02 08:55:02,605 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50540]
+INFO 2025-07-02 08:55:02,605 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:50540]
+INFO 2025-07-02 08:55:02,606 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:02,609 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:02,611 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:02,613 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50540]
+INFO 2025-07-02 08:55:02,613 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:50540]
+INFO 2025-07-02 08:55:02,614 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50540]
+INFO 2025-07-02 08:55:02,614 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:50540]
+INFO 2025-07-02 08:55:02,909 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50554]
+INFO 2025-07-02 08:55:02,909 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50554]
+INFO 2025-07-02 08:55:02,909 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:55:02,914 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:55:02,958 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50554]
+INFO 2025-07-02 08:55:02,958 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50554]
+INFO 2025-07-02 08:55:03,050 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:55:03,053 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:55:03,053 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:55:03,062 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.07, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:55:03,062 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.07, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:55:04,396 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50554]
+INFO 2025-07-02 08:55:04,396 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50554]
+INFO 2025-07-02 08:55:06,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:54520]
+INFO 2025-07-02 08:55:06,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:54520]
+INFO 2025-07-02 08:55:06,606 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:06,607 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:06,608 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:06,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:54520]
+INFO 2025-07-02 08:55:06,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:54520]
+INFO 2025-07-02 08:55:06,612 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:54520]
+INFO 2025-07-02 08:55:06,612 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:54520]
+INFO 2025-07-02 08:55:10,598 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:54524]
+INFO 2025-07-02 08:55:10,598 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:54524]
+INFO 2025-07-02 08:55:10,599 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:10,602 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:10,602 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:10,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:54524]
+INFO 2025-07-02 08:55:10,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:54524]
+INFO 2025-07-02 08:55:10,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:54524]
+INFO 2025-07-02 08:55:10,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:54524]
+INFO 2025-07-02 08:55:14,598 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:38574]
+INFO 2025-07-02 08:55:14,598 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:38574]
+INFO 2025-07-02 08:55:14,600 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:14,601 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:14,601 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:14,602 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:38574]
+INFO 2025-07-02 08:55:14,602 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:38574]
+INFO 2025-07-02 08:55:14,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:38574]
+INFO 2025-07-02 08:55:14,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:38574]
+INFO 2025-07-02 08:55:18,600 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:38590]
+INFO 2025-07-02 08:55:18,600 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:38590]
+INFO 2025-07-02 08:55:18,602 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:18,603 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:18,604 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:18,605 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:38590]
+INFO 2025-07-02 08:55:18,605 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:38590]
+INFO 2025-07-02 08:55:18,607 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:38590]
+INFO 2025-07-02 08:55:18,607 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:38590]
+INFO 2025-07-02 08:55:22,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:38606]
+INFO 2025-07-02 08:55:22,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:38606]
+INFO 2025-07-02 08:55:22,605 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:22,606 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:22,607 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:22,607 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:38606]
+INFO 2025-07-02 08:55:22,607 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:38606]
+INFO 2025-07-02 08:55:22,608 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:38606]
+INFO 2025-07-02 08:55:22,608 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:38606]
+INFO 2025-07-02 08:55:39,667 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:55990]
+INFO 2025-07-02 08:55:39,667 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:55990]
+INFO 2025-07-02 08:55:39,668 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:39,668 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:39,669 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:39,670 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:55990]
+INFO 2025-07-02 08:55:39,670 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:55990]
+INFO 2025-07-02 08:55:39,671 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:55990]
+INFO 2025-07-02 08:55:39,671 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:55990]
+INFO 2025-07-02 08:55:39,685 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:55994]
+INFO 2025-07-02 08:55:39,685 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:55994]
+INFO 2025-07-02 08:55:39,686 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:55:39,691 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:55:39,726 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:55994]
+INFO 2025-07-02 08:55:39,726 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:55994]
+INFO 2025-07-02 08:55:39,797 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:55:39,804 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:55:39,804 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:55:39,823 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.07, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:55:39,823 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.07, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:55:42,679 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:56002]
+INFO 2025-07-02 08:55:42,679 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:56002]
+INFO 2025-07-02 08:55:42,680 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:42,681 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:42,682 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:42,682 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:56002]
+INFO 2025-07-02 08:55:42,682 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:56002]
+INFO 2025-07-02 08:55:42,683 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:56002]
+INFO 2025-07-02 08:55:42,683 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:56002]
+INFO 2025-07-02 08:55:45,698 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40696]
+INFO 2025-07-02 08:55:45,698 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40696]
+INFO 2025-07-02 08:55:45,700 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:45,702 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:45,704 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:45,705 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40696]
+INFO 2025-07-02 08:55:45,705 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40696]
+INFO 2025-07-02 08:55:45,707 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40696]
+INFO 2025-07-02 08:55:45,707 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40696]
+INFO 2025-07-02 08:55:48,727 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40704]
+INFO 2025-07-02 08:55:48,727 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40704]
+INFO 2025-07-02 08:55:48,728 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:48,732 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:48,733 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:48,734 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40704]
+INFO 2025-07-02 08:55:48,734 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40704]
+INFO 2025-07-02 08:55:48,736 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40704]
+INFO 2025-07-02 08:55:48,736 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40704]
+INFO 2025-07-02 08:55:50,558 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:55994]
+INFO 2025-07-02 08:55:50,558 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:55994]
+INFO 2025-07-02 08:55:52,603 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40720]
+INFO 2025-07-02 08:55:52,603 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40720]
+INFO 2025-07-02 08:55:52,604 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:52,606 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:52,608 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:52,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40720]
+INFO 2025-07-02 08:55:52,610 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40720]
+INFO 2025-07-02 08:55:52,612 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40720]
+INFO 2025-07-02 08:55:52,612 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40720]
+INFO 2025-07-02 08:55:56,613 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:55134]
+INFO 2025-07-02 08:55:56,613 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:55134]
+INFO 2025-07-02 08:55:56,615 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:55:56,617 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:55:56,618 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:55:56,620 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:55134]
+INFO 2025-07-02 08:55:56,620 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:55134]
+INFO 2025-07-02 08:55:56,622 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:55134]
+INFO 2025-07-02 08:55:56,622 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:55134]
+INFO 2025-07-02 08:56:21,279 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:60124]
+INFO 2025-07-02 08:56:21,279 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:60124]
+INFO 2025-07-02 08:56:21,279 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:21,280 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:21,280 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:21,280 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:60124]
+INFO 2025-07-02 08:56:21,280 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:60124]
+INFO 2025-07-02 08:56:21,281 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:60124]
+INFO 2025-07-02 08:56:21,281 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:60124]
+INFO 2025-07-02 08:56:21,294 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:60140]
+INFO 2025-07-02 08:56:21,294 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:60140]
+INFO 2025-07-02 08:56:21,296 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:56:21,305 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:56:21,347 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:60140]
+INFO 2025-07-02 08:56:21,347 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:60140]
+INFO 2025-07-02 08:56:21,433 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:56:21,436 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:56:21,436 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:56:21,445 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.05, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:56:21,445 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.05, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:56:23,986 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:60140]
+INFO 2025-07-02 08:56:23,986 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:60140]
+INFO 2025-07-02 08:56:24,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33420]
+INFO 2025-07-02 08:56:24,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33420]
+INFO 2025-07-02 08:56:24,605 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:24,606 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:24,606 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:24,607 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33420]
+INFO 2025-07-02 08:56:24,607 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33420]
+INFO 2025-07-02 08:56:24,608 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33420]
+INFO 2025-07-02 08:56:24,608 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33420]
+INFO 2025-07-02 08:56:27,511 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33436]
+INFO 2025-07-02 08:56:27,511 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33436]
+INFO 2025-07-02 08:56:27,512 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:27,512 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:27,513 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:27,514 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33436]
+INFO 2025-07-02 08:56:27,514 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33436]
+INFO 2025-07-02 08:56:27,514 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33436]
+INFO 2025-07-02 08:56:27,514 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33436]
+INFO 2025-07-02 08:56:27,532 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:33448]
+INFO 2025-07-02 08:56:27,532 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:33448]
+INFO 2025-07-02 08:56:27,534 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 08:56:27,544 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 08:56:27,578 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:33448]
+INFO 2025-07-02 08:56:27,578 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:33448]
+INFO 2025-07-02 08:56:27,666 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 08:56:27,669 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 08:56:27,669 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 08:56:27,679 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.06, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:56:27,679 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.06, 127.0.0.1:50538][0m
+INFO 2025-07-02 08:56:30,527 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33450]
+INFO 2025-07-02 08:56:30,527 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33450]
+INFO 2025-07-02 08:56:30,528 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:30,530 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:30,530 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:30,531 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33450]
+INFO 2025-07-02 08:56:30,531 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33450]
+INFO 2025-07-02 08:56:30,533 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33450]
+INFO 2025-07-02 08:56:30,533 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33450]
+INFO 2025-07-02 08:56:30,959 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:33448]
+INFO 2025-07-02 08:56:30,959 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:33448]
+INFO 2025-07-02 08:56:33,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33460]
+INFO 2025-07-02 08:56:33,604 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:33460]
+INFO 2025-07-02 08:56:33,605 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:33,606 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:33,608 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:33,609 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33460]
+INFO 2025-07-02 08:56:33,609 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:33460]
+INFO 2025-07-02 08:56:33,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33460]
+INFO 2025-07-02 08:56:33,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:33460]
+INFO 2025-07-02 08:56:37,606 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:53942]
+INFO 2025-07-02 08:56:37,606 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:53942]
+INFO 2025-07-02 08:56:37,606 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:37,607 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:37,608 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:37,609 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:53942]
+INFO 2025-07-02 08:56:37,609 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:53942]
+INFO 2025-07-02 08:56:37,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:53942]
+INFO 2025-07-02 08:56:37,609 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:53942]
+INFO 2025-07-02 08:56:41,608 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:53950]
+INFO 2025-07-02 08:56:41,608 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:53950]
+INFO 2025-07-02 08:56:41,611 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:41,613 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:41,615 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:41,616 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:53950]
+INFO 2025-07-02 08:56:41,616 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:53950]
+INFO 2025-07-02 08:56:41,617 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:53950]
+INFO 2025-07-02 08:56:41,617 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:53950]
+INFO 2025-07-02 08:56:45,601 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40694]
+INFO 2025-07-02 08:56:45,601 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:40694]
+INFO 2025-07-02 08:56:45,601 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 08:56:45,602 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 08:56:45,602 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 08:56:45,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40694]
+INFO 2025-07-02 08:56:45,603 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:40694]
+INFO 2025-07-02 08:56:45,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40694]
+INFO 2025-07-02 08:56:45,604 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:40694]
+INFO 2025-07-02 09:00:11,291 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:36806]
+INFO 2025-07-02 09:00:11,291 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:36806]
+INFO 2025-07-02 09:00:11,305 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:11,328 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:11,330 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:11,334 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:36806]
+INFO 2025-07-02 09:00:11,334 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:36806]
+INFO 2025-07-02 09:00:11,339 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:36806]
+INFO 2025-07-02 09:00:11,339 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:36806]
+INFO 2025-07-02 09:00:11,350 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:36812]
+INFO 2025-07-02 09:00:11,350 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:36812]
+INFO 2025-07-02 09:00:11,351 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 09:00:11,458 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 09:00:11,618 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:36812]
+INFO 2025-07-02 09:00:11,618 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:36812]
+INFO 2025-07-02 09:00:11,816 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 09:00:11,825 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 09:00:11,825 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 09:00:11,866 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.21, 127.0.0.1:36826][0m
+INFO 2025-07-02 09:00:11,866 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.21, 127.0.0.1:36826][0m
+INFO 2025-07-02 09:00:13,567 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.09, 127.0.0.1:36826][0m
+INFO 2025-07-02 09:00:13,567 runserver 55525 139832540001984 [mHTTP GET /api/connections/alchemy-suggestions/ 200 [0.09, 127.0.0.1:36826][0m
+INFO 2025-07-02 09:00:14,357 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:36836]
+INFO 2025-07-02 09:00:14,357 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:36836]
+INFO 2025-07-02 09:00:14,359 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:14,362 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:14,364 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:14,366 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:36836]
+INFO 2025-07-02 09:00:14,366 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:36836]
+INFO 2025-07-02 09:00:14,368 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:36836]
+INFO 2025-07-02 09:00:14,368 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:36836]
+INFO 2025-07-02 09:00:16,050 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:36812]
+INFO 2025-07-02 09:00:16,050 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:36812]
+INFO 2025-07-02 09:00:17,597 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57186]
+INFO 2025-07-02 09:00:17,597 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57186]
+INFO 2025-07-02 09:00:17,597 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:17,598 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:17,598 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:17,598 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57186]
+INFO 2025-07-02 09:00:17,598 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57186]
+INFO 2025-07-02 09:00:17,599 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57186]
+INFO 2025-07-02 09:00:17,599 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57186]
+INFO 2025-07-02 09:00:21,223 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57196]
+INFO 2025-07-02 09:00:21,223 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57196]
+INFO 2025-07-02 09:00:21,224 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:21,226 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:21,227 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:21,228 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57196]
+INFO 2025-07-02 09:00:21,228 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57196]
+INFO 2025-07-02 09:00:21,229 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57196]
+INFO 2025-07-02 09:00:21,229 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57196]
+INFO 2025-07-02 09:00:21,244 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:57204]
+INFO 2025-07-02 09:00:21,244 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:57204]
+INFO 2025-07-02 09:00:21,245 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 09:00:21,250 asgi 55525 139832540001984 Token validated successfully for user: horugavye
+INFO 2025-07-02 09:00:21,290 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:57204]
+INFO 2025-07-02 09:00:21,290 runserver 55525 139832540001984 WebSocket CONNECT /ws/notifications/ [127.0.0.1:57204]
+INFO 2025-07-02 09:00:21,365 views 55525 139831736768192 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 09:00:21,368 views 55525 139831736768192 Returning 0 notifications for user 1
+INFO 2025-07-02 09:00:21,368 views 55525 139831736768192 Notification data: []
+INFO 2025-07-02 09:00:21,378 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.06, 127.0.0.1:36826][0m
+INFO 2025-07-02 09:00:21,378 runserver 55525 139832540001984 [mHTTP GET /api/notifications/notifications/ 200 [0.06, 127.0.0.1:36826][0m
+INFO 2025-07-02 09:00:24,238 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57220]
+INFO 2025-07-02 09:00:24,238 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:57220]
+INFO 2025-07-02 09:00:24,239 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:24,241 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:24,241 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:24,241 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57220]
+INFO 2025-07-02 09:00:24,241 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:57220]
+INFO 2025-07-02 09:00:24,242 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57220]
+INFO 2025-07-02 09:00:24,242 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:57220]
+INFO 2025-07-02 09:00:27,261 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42356]
+INFO 2025-07-02 09:00:27,261 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42356]
+INFO 2025-07-02 09:00:27,265 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:27,268 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:27,270 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:27,271 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42356]
+INFO 2025-07-02 09:00:27,271 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42356]
+INFO 2025-07-02 09:00:27,273 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42356]
+INFO 2025-07-02 09:00:27,273 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42356]
+INFO 2025-07-02 09:00:30,288 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42366]
+INFO 2025-07-02 09:00:30,288 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42366]
+INFO 2025-07-02 09:00:30,288 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:30,289 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:30,290 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:30,290 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42366]
+INFO 2025-07-02 09:00:30,290 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42366]
+INFO 2025-07-02 09:00:30,291 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42366]
+INFO 2025-07-02 09:00:30,291 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42366]
+INFO 2025-07-02 09:00:33,319 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42368]
+INFO 2025-07-02 09:00:33,319 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42368]
+INFO 2025-07-02 09:00:33,322 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:33,324 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:33,328 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:33,331 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42368]
+INFO 2025-07-02 09:00:33,331 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42368]
+INFO 2025-07-02 09:00:33,337 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42368]
+INFO 2025-07-02 09:00:33,337 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42368]
+INFO 2025-07-02 09:00:36,346 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42526]
+INFO 2025-07-02 09:00:36,346 runserver 55525 139832540001984 WebSocket HANDSHAKING /ws/chat/global/ [127.0.0.1:42526]
+INFO 2025-07-02 09:00:36,347 asgi 55525 139832540001984 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+ERROR 2025-07-02 09:00:36,347 asgi 55525 139832422418112 Error getting user from token: Token is invalid or expired
+ERROR 2025-07-02 09:00:36,348 asgi 55525 139832540001984 Token validation failed - no user found
+INFO 2025-07-02 09:00:36,349 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42526]
+INFO 2025-07-02 09:00:36,349 runserver 55525 139832540001984 WebSocket REJECT /ws/chat/global/ [127.0.0.1:42526]
+INFO 2025-07-02 09:00:36,349 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42526]
+INFO 2025-07-02 09:00:36,349 runserver 55525 139832540001984 WebSocket DISCONNECT /ws/chat/global/ [127.0.0.1:42526]
+INFO 2025-07-02 09:00:52,145 autoreload 55525 139832647708928 /home/superlink/Superlink/Superlink/community_api/views.py changed, reloading.
+INFO 2025-07-02 09:00:52,145 autoreload 55525 139832647708928 /home/superlink/Superlink/Superlink/community_api/views.py changed, reloading.
+INFO 2025-07-02 09:01:00,795 autoreload 94867 139965223338240 Watching for file changes with StatReloader
+INFO 2025-07-02 09:01:00,795 autoreload 94867 139965223338240 Watching for file changes with StatReloader
+INFO 2025-07-02 09:01:02,446 services 94867 139965223338240 Mistral configuration - Model: mistral-large-latest
+INFO 2025-07-02 09:01:02,446 services 94867 139965223338240 Mistral API key configured: Yes
+INFO 2025-07-02 09:01:02,598 services 94867 139965223338240 Mistral AI API client successfully initialized
+WARNING 2025-07-02 09:01:03,394 consumers 94867 139965115659968 Azure Speech Service not initialized - missing or invalid speech key
+INFO 2025-07-02 09:01:03,395 asgi 94867 139965115659968 Signal handlers will be initialized in main thread
+INFO 2025-07-02 09:01:03,402 server 94867 139965115659968 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2025-07-02 09:01:03,403 server 94867 139965115659968 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2025-07-02 09:01:03,404 server 94867 139965115659968 Listening on TCP address 127.0.0.1:8000
+INFO 2025-07-02 09:01:05,555 runserver 94867 139965115659968 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50468]
+INFO 2025-07-02 09:01:05,555 runserver 94867 139965115659968 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50468]
+INFO 2025-07-02 09:01:05,557 asgi 94867 139965115659968 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 09:01:05,594 asgi 94867 139965115659968 Token validated successfully for user: horugavye
+INFO 2025-07-02 09:01:05,649 runserver 94867 139965115659968 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50468]
+INFO 2025-07-02 09:01:05,649 runserver 94867 139965115659968 WebSocket CONNECT /ws/notifications/ [127.0.0.1:50468]
+INFO 2025-07-02 09:01:05,713 views 94867 139964981434048 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 09:01:05,716 views 94867 139964981434048 Returning 0 notifications for user 1
+INFO 2025-07-02 09:01:05,716 views 94867 139964981434048 Notification data: []
+INFO 2025-07-02 09:01:05,750 runserver 94867 139965115659968 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:50480][0m
+INFO 2025-07-02 09:01:05,750 runserver 94867 139965115659968 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:50480][0m
+INFO 2025-07-02 09:02:27,269 autoreload 94867 139965223338240 /home/superlink/Superlink/Superlink/users/models.py changed, reloading.
+INFO 2025-07-02 09:02:27,269 autoreload 94867 139965223338240 /home/superlink/Superlink/Superlink/users/models.py changed, reloading.
+INFO 2025-07-02 09:02:29,229 autoreload 95646 140668398186752 Watching for file changes with StatReloader
+INFO 2025-07-02 09:02:29,229 autoreload 95646 140668398186752 Watching for file changes with StatReloader
+INFO 2025-07-02 09:02:30,564 services 95646 140668398186752 Mistral configuration - Model: mistral-large-latest
+INFO 2025-07-02 09:02:30,565 services 95646 140668398186752 Mistral API key configured: Yes
+INFO 2025-07-02 09:02:30,739 services 95646 140668398186752 Mistral AI API client successfully initialized
+WARNING 2025-07-02 09:02:31,391 consumers 95646 140668290725568 Azure Speech Service not initialized - missing or invalid speech key
+INFO 2025-07-02 09:02:31,393 asgi 95646 140668290725568 Signal handlers will be initialized in main thread
+INFO 2025-07-02 09:02:31,408 server 95646 140668290725568 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2025-07-02 09:02:31,408 server 95646 140668290725568 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2025-07-02 09:02:31,410 server 95646 140668290725568 Listening on TCP address 127.0.0.1:8000
+INFO 2025-07-02 09:02:35,955 runserver 95646 140668290725568 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:38836]
+INFO 2025-07-02 09:02:35,955 runserver 95646 140668290725568 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:38836]
+INFO 2025-07-02 09:02:35,957 asgi 95646 140668290725568 Attempting to validate token: eyJhbGciOiJIUzI1NiIs...
+INFO 2025-07-02 09:02:36,022 asgi 95646 140668290725568 Token validated successfully for user: horugavye
+INFO 2025-07-02 09:02:36,076 runserver 95646 140668290725568 WebSocket CONNECT /ws/notifications/ [127.0.0.1:38836]
+INFO 2025-07-02 09:02:36,076 runserver 95646 140668290725568 WebSocket CONNECT /ws/notifications/ [127.0.0.1:38836]
+INFO 2025-07-02 09:02:36,174 views 95646 140668148111040 Fetching notifications for user 1. Found 0 notifications
+INFO 2025-07-02 09:02:36,178 views 95646 140668148111040 Returning 0 notifications for user 1
+INFO 2025-07-02 09:02:36,179 views 95646 140668148111040 Notification data: []
+INFO 2025-07-02 09:02:36,190 runserver 95646 140668290725568 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:38852][0m
+INFO 2025-07-02 09:02:36,190 runserver 95646 140668290725568 [mHTTP GET /api/notifications/notifications/ 200 [0.08, 127.0.0.1:38852][0m
+INFO 2025-07-02 09:04:23,853 services 96818 140333304127744 Mistral configuration - Model: mistral-large-latest
+INFO 2025-07-02 09:04:23,854 services 96818 140333304127744 Mistral API key configured: Yes
+INFO 2025-07-02 09:04:23,961 services 96818 140333304127744 Mistral AI API client successfully initialized
+INFO 2025-07-02 09:04:41,970 services 97014 139870814253312 Mistral configuration - Model: mistral-large-latest
+INFO 2025-07-02 09:04:41,970 services 97014 139870814253312 Mistral API key configured: Yes
+INFO 2025-07-02 09:04:42,050 services 97014 139870814253312 Mistral AI API client successfully initialized
+INFO 2025-07-02 09:05:09,268 services 97269 140238443094272 Mistral configuration - Model: mistral-large-latest
+INFO 2025-07-02 09:05:09,268 services 97269 140238443094272 Mistral API key configured: Yes
+INFO 2025-07-02 09:05:09,369 services 97269 140238443094272 Mistral AI API client successfully initialized
